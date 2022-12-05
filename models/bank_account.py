@@ -1,26 +1,29 @@
-from models.model import Model
+from models.model import Model, Currency
 
-class Currency:
-    USD = 0
-    MAD = 0
+
+class AccountType:
+    Checking = 0
+    Savings = 1
 
     def code(s):
-        if s == Currency.USD: return "usd"
-        if s == Currency.MAD: return "mad"
+        if s == AccountType.Checking: return "checking"
+        if s == AccountType.Savings: return "savings"
 
     def decode(s):
-        if s == "usd": return Currency.USD
-        if s == "mad": return Currency.MAD
+        if s == "checking": return AccountType.Checking
+        if s == "savings": return AccountType.Savings
+
 
 class BankAccountModel(Model):
     __cid:int = 0
 
-    def __init__(self, name:str="") -> None:
+    def __init__(self, name:str="", code:str="") -> None:
         super().__init__()
         self.id = self.mid
 
         self.name = name
-        self.type = type
+        self.code = code
+        self.type = AccountType.Checking
         self.currency = Currency.USD
         self.amount = 0.0
 
@@ -34,7 +37,7 @@ class BankAccountModel(Model):
         self.id = self.mid
 
 
-    def code(id: int=-1) -> str:
+    def encode(id: int=-1) -> str:
         return "BAC" + str(id).zfill(4)
 
     def decode(code:str):
@@ -45,16 +48,17 @@ class BankAccountModel(Model):
         if incude_id:
             d['id'] = self.id
         d['name'] = self.name
-        d['type'] = self.type
-        d['currency'] = self.currency
+        d['code'] = self.code
+        d['type'] = AccountType.code(self.type)
+        d['currency'] = Currency.code(self.currency)
         d['amount'] = self.amount
         return d
 
     def from_json(item):
-        clt = BankAccountModel(name=item['name'])
+        clt = BankAccountModel(name=item['name'], code=item['code'])
         clt.mid = item['id']
-        clt.type = item['type']
-        clt.currency = item['currency']
+        clt.type = AccountType.decode(item['type'])
+        clt.currency = Currency.decode(item['currency'])
         clt.amount = item['amount']
 
         return clt

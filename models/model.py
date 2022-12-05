@@ -12,8 +12,20 @@ class Model:
     def from_json(k, item):
         raise NotImplemented("'from_json' need to be implemented in a child class!")
 
-    def code(id:int):
+    def encode(id:int):
         raise NotImplemented("'code' need to be implemented in a child class!")
 
     def decode(code:str):
         raise NotImplemented("'decode' need to be implemented in a child class!")
+
+class Currency:
+    USD = 0
+    MAD = 1
+
+    def code(s):
+        if s == Currency.USD: return "usd"
+        if s == Currency.MAD: return "mad"
+
+    def decode(s):
+        if s == "usd": return Currency.USD
+        if s == "mad": return Currency.MAD

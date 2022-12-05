@@ -1,2 +1,3 @@
-from controllers.bank_account import BankAccount
 from controllers.client import ClientController
+from controllers.bank_account import BankAccountController
+from controllers.payment import PaymentController

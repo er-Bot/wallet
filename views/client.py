@@ -36,13 +36,16 @@ class ClientView(TableView):
         self.search.setText('')
         self.populate()
 
-    def populate(self):
+    def populate(self, rid=None):
         self.table.setRowCount(0)
 
         prompt = self.search.text().strip()
         
         if prompt == '':
-            clts = ClientController.all()
+            if rid != None:
+                clts = [ClientController.get(rid)]
+            else:
+                clts = ClientController.all()
         else:
             clts = ClientController.search(prompt)
 
@@ -53,7 +56,7 @@ class ClientView(TableView):
         self.toggle_empty()
 
     def set_row_content(self, r:int, clt:ClientModel):
-        nm = QPushButton(ClientModel.code(clt.id))
+        nm = QPushButton(ClientModel.encode(clt.id))
         nm.setProperty('class', 'LinkButton')
         nm.setCursor(Qt.PointingHandCursor)
         nm.clicked.connect(lambda:self.list_projects(clt.id))
@@ -121,7 +124,7 @@ class ClientView(TableView):
     def remove_row(self, r):
         cid = ClientModel.decode(self.table.cellWidget(r, 0).text())
 
-        ynd = YesNoDialog(f"Are you sure to delete client [CLT{ClientModel.code(cid)}]?")
+        ynd = YesNoDialog(f"Are you sure to delete client [{ClientModel.encode(cid)}]?")
         ynd.exec()
         if ynd.resp == YesNoDialog.Yes:
             self.table.removeRow(r)
@@ -180,7 +183,7 @@ class AddEditClientView(QDialog, UI_AddEditClient):
         self.email.setText('; '.join(model.mails))
         self.phone.setText('; '.join(model.phones))
 
-        self.logo.setText(f"Client #{ClientModel.code(model.id)}")
+        self.logo.setText(f"Client #{ClientModel.encode(model.id)}")
         self.country.setCurrentText(model.country)
 
     def keyPressEvent(self, event:QKeyEvent) -> None:

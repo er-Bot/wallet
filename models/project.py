@@ -56,7 +56,7 @@ class ProjectModel(Model):
             self.end_date = date
             self.state = state
 
-    def code(id: int):
+    def encode(id: int):
         return f"project_{id:05d}"
 
     def decode(code: str):

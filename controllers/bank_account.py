@@ -1,62 +1,47 @@
 from db.db_manager import DBManager
-from tinydb import Query
+from models import BankAccountModel
 
-class BankAccount:
-    db = DBManager()
-    query = Query()
+class BankAccountController:
+    
+    def all():
+        return BankAccountController.to_model(DBManager.bank_accounts.all())
 
-    def display_accounts():
-        bank_accounts = BankAccount.db.bank_accounts.all()
-        if len(bank_accounts) == 0:
-            print(f"+{'-'*80}+")
-            print(f"|{'  No Bank Acounts Found!':<80}|")
-            print(f"+{'-'*80}+")
-            return
+    def get(id):
+        return BankAccountController.to_model(DBManager.bank_accounts.search(DBManager.query.id == id))[0]
 
-        print(f"+{'-'*80}+")
-        for account in BankAccount.db.bank_accounts.all():
-            aid, name, type, currency, amount = account['id'], account['name'], account['type'], account['currency'], account['amount']
-            print(f"|{f'  BankAccount [BAC{aid:04d}]':<80}|")
-            print(f"|{f'   +- Name     : {name}':<80}|")
-            print(f"|{f'   +- Type     : {type}':<80}|")
-            print(f"|{f'   +- Currency : {currency}':<80}|")
-            print(f"|{f'   +- Amount   : {amount}':<80}|")
-            print(f"+{'-'*80}+")
+    def insert(record:BankAccountModel):
+        DBManager.bank_accounts.insert(record.to_json())
 
-    def add_account():
-        aid = int(input("ID       : "))
-        name = input("Name     : ")
-        type = input("Type     : ")
-        curr = input("Currency : ")
-        amnt = float(input("Amount   : "))
+    def update(record:BankAccountModel):
+        DBManager.bank_accounts.update(record.to_json(False), DBManager.query.id == record.id)
+
+    def delete(cid):
+        DBManager.bank_accounts.remove(DBManager.query.id == cid)
+
+    def search(search, filter='ntcr', ignore=[]):
+        clts = set()
+
+        q = DBManager.query.id == -1
+        if 'n' in filter:
+            q = q | DBManager.query.name.test(DBManager.has, search)
+        if 't' in filter:
+            q = q | DBManager.query.type.test(DBManager.has, search)
+        if 'c' in filter:
+            q = q | DBManager.query.code.test(DBManager.has, search)
+        if 'r' in filter:
+            q = q | DBManager.query.currency.test(DBManager.has, search)
+        q = (q) & ~(DBManager.query.id.one_of(ignore))
         
-        BankAccount.db.bank_accounts.insert({'id': aid, 'name': name, 'type': type, 'currency': curr, 'amount': amnt})
+        clts = BankAccountController.to_model(DBManager.bank_accounts.search(q)) 
 
-    def update_account():
-        aid = int(input("ID : "))
+        return set(clts)
 
-        print(f"+{'-'*80}+")
-        print(f"|{f'  BankAccount [BAC{aid:04d}]':<80}|")
-        print(f"|{f'   1. Update Name':<80}|")
-        print(f"|{f'   2. Update Type':<80}|")
-        print(f"|{f'   3. Update Currency':<80}|")
-        print(f"|{f'   4. Update Amount':<80}|")
-        print(f"+{'-'*80}+")
+    def exists(search, filter='ntcr', ignore=[]):
+        clts = BankAccountController.search(search, filter, ignore)
+        return len(clts) != 0
 
-        cm = input('>>> ')
-        if cm == '1':
-            name = input("Name : ")
-            BankAccount.db.bank_accounts.update({'name': name}, BankAccount.query.id == aid)
-        if cm == '2':
-            type = input("Type : ")
-            BankAccount.db.bank_accounts.update({'type': type}, BankAccount.query.id == aid)
-        if cm == '3':
-            curr = input("Currency : ")
-            BankAccount.db.bank_accounts.update({'currency': curr}, BankAccount.query.id == aid)
-        if cm == '4':
-            amnt = input("Amount : ")
-            BankAccount.db.bank_accounts.update({'amount': amnt}, BankAccount.query.id == aid)
-
-    def remove_account():
-        cid = int(input("ID : "))
-        BankAccount.db.bank_accounts.remove(BankAccount.query.id == cid)
+    def to_model(clts) -> list[BankAccountModel]:
+        res = []
+        for clt in clts:
+            res.append(BankAccountModel.from_json(clt))
+        return res

@@ -38,7 +38,7 @@ class ClientModel(Model):
         tel = tel.strip()
         if tel != '' and tel not in self.phones: self.phones.append(tel)
 
-    def code(id: int=-1) -> str:
+    def encode(id: int=-1) -> str:
         return "CLT" + str(id).zfill(4)
 
     def decode(code:str):

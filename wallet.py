@@ -3,7 +3,7 @@ from PySide6.QtCore import *
 import sys
 
 from ui import UI_Main, STYLE_SHEET
-from views import DashboardView, ClientView, BankAccountView
+from views import DashboardView, ClientView, BankAccountView, PaymentView
 
 class MainWindow(QMainWindow, UI_Main):
     def __init__(self):
@@ -30,6 +30,7 @@ class MainWindow(QMainWindow, UI_Main):
         self.dashboard_btn.clicked.connect(lambda : self.update_view("dashboard"))
         self.clients_btn.clicked.connect(lambda : self.update_view("client"))
         self.accounts_btn.clicked.connect(lambda : self.update_view("bank_account"))
+        self.payments_btn.clicked.connect(lambda : self.update_view("payment"))
         
         self.quit_btn.clicked.connect(self.quit)
 
@@ -43,6 +44,7 @@ class MainWindow(QMainWindow, UI_Main):
             "dashboard": DashboardView(self),
             "client": ClientView(self),
             "bank_account": BankAccountView(self),
+            "payment": PaymentView(self),
         #     "project": ProjectView(self),
         }
 
@@ -51,13 +53,15 @@ class MainWindow(QMainWindow, UI_Main):
             self.view_layout.addWidget(self.tables[k])
         self.main_frame.setLayout(self.view_layout)
 
-        self.update_view("client")
+        self.update_view("payment")
 
-    def update_view(self, k, id=None):
+    def update_view(self, k, rid=None):
         for _, v in self.tables.items():
             v.hide()
 
-        self.tables[k].update()
+        if rid != None:
+            self.tables[k].populate(rid)
+
         self.tables[k].show()
 
     def expand(self, k):

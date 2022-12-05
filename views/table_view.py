@@ -37,7 +37,7 @@ class TableView(QWidget, UI_Table):
     def edit_row(self, r):
         raise NotImplemented("method not yet implemented!")
 
-    def populate(self):
+    def populate(self, id=None):
         raise NotImplemented("method not yet implemented!")
 
     def remove_button():

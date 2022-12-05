@@ -6,8 +6,8 @@ class ClientController:
     def all():
         return ClientController.to_model(DBManager.clients.all())
 
-    def get(id):
-        return ClientController.to_model(DBManager.clients.search(DBManager.query.id == id))[0]
+    def get(rid):
+        return ClientController.to_model(DBManager.clients.search(DBManager.query.id == rid))[0]
 
     def insert(client:ClientModel):
         DBManager.clients.insert(client.to_json())
@@ -36,7 +36,7 @@ class ClientController:
 
         return set(clts)
 
-    def exists(search, filter='a', ignore=[]):
+    def exists(search, filter='numt', ignore=[]):
         clts = ClientController.search(search, filter, ignore)
         
         return len(clts) != 0
