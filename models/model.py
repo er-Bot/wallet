@@ -22,6 +22,9 @@ class Currency:
     USD = 0
     MAD = 1
 
+    def get():
+        return [Currency.USD, Currency.MAD]
+
     def code(s):
         if s == Currency.USD: return "usd"
         if s == Currency.MAD: return "mad"

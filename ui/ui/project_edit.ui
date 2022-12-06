@@ -113,7 +113,7 @@
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>100</height>
+          <height>0</height>
          </size>
         </property>
         <property name="frameShape">
@@ -178,7 +178,6 @@
               </property>
               <property name="font">
                <font>
-                <family>Segoe UI</family>
                 <pointsize>10</pointsize>
                 <italic>false</italic>
                 <bold>true</bold>
@@ -293,7 +292,6 @@
                  </property>
                  <property name="font">
                   <font>
-                   <family>Segoe UI</family>
                    <pointsize>10</pointsize>
                    <italic>false</italic>
                    <bold>true</bold>
@@ -413,7 +411,6 @@
                  </property>
                  <property name="font">
                   <font>
-                   <family>Segoe UI</family>
                    <pointsize>10</pointsize>
                    <italic>false</italic>
                    <bold>true</bold>
@@ -507,7 +504,6 @@
                  </property>
                  <property name="font">
                   <font>
-                   <family>Segoe UI</family>
                    <pointsize>10</pointsize>
                    <italic>false</italic>
                    <bold>true</bold>
@@ -525,13 +521,13 @@
                 <widget class="QDateEdit" name="start_date">
                  <property name="minimumSize">
                   <size>
-                   <width>30</width>
+                   <width>120</width>
                    <height>30</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
-                   <width>1000</width>
+                   <width>120</width>
                    <height>16777215</height>
                   </size>
                  </property>
@@ -548,6 +544,19 @@
                </item>
               </layout>
              </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
             </item>
             <item>
              <widget class="QFrame" name="frame_12">
@@ -599,13 +608,13 @@
                 <widget class="QDateEdit" name="due_date">
                  <property name="minimumSize">
                   <size>
-                   <width>30</width>
+                   <width>120</width>
                    <height>30</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
-                   <width>1000</width>
+                   <width>120</width>
                    <height>16777215</height>
                   </size>
                  </property>
@@ -675,7 +684,6 @@
                  </property>
                  <property name="font">
                   <font>
-                   <family>Segoe UI</family>
                    <pointsize>10</pointsize>
                    <italic>false</italic>
                    <bold>true</bold>
@@ -685,7 +693,7 @@
                   <string notr="true">font: 700 10pt &quot;Segoe UI&quot;;</string>
                  </property>
                  <property name="text">
-                  <string>Delivery Date</string>
+                  <string>End Date</string>
                  </property>
                 </widget>
                </item>
@@ -693,13 +701,13 @@
                 <widget class="QDateEdit" name="end_date">
                  <property name="minimumSize">
                   <size>
-                   <width>30</width>
+                   <width>120</width>
                    <height>30</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
-                   <width>1000</width>
+                   <width>120</width>
                    <height>16777215</height>
                   </size>
                  </property>
@@ -725,13 +733,13 @@
            <property name="minimumSize">
             <size>
              <width>0</width>
-             <height>60</height>
+             <height>50</height>
             </size>
            </property>
            <property name="maximumSize">
             <size>
              <width>16777215</width>
-             <height>60</height>
+             <height>50</height>
             </size>
            </property>
            <property name="frameShape">
@@ -772,7 +780,6 @@
               </property>
               <property name="font">
                <font>
-                <family>Segoe UI</family>
                 <pointsize>10</pointsize>
                 <italic>false</italic>
                 <bold>true</bold>
@@ -787,7 +794,14 @@
              </widget>
             </item>
             <item>
-             <widget class="QPlainTextEdit" name="description"/>
+             <widget class="QPlainTextEdit" name="description">
+              <property name="maximumSize">
+               <size>
+                <width>16666666</width>
+                <height>50</height>
+               </size>
+              </property>
+             </widget>
             </item>
            </layout>
           </widget>
@@ -797,13 +811,13 @@
            <property name="minimumSize">
             <size>
              <width>0</width>
-             <height>60</height>
+             <height>50</height>
             </size>
            </property>
            <property name="maximumSize">
             <size>
              <width>16777215</width>
-             <height>60</height>
+             <height>50</height>
             </size>
            </property>
            <property name="frameShape">
@@ -844,7 +858,6 @@
               </property>
               <property name="font">
                <font>
-                <family>Segoe UI</family>
                 <pointsize>10</pointsize>
                 <italic>false</italic>
                 <bold>true</bold>
@@ -859,13 +872,26 @@
              </widget>
             </item>
             <item>
-             <widget class="QPlainTextEdit" name="comment"/>
+             <widget class="QPlainTextEdit" name="comment">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>50</height>
+               </size>
+              </property>
+             </widget>
             </item>
            </layout>
           </widget>
          </item>
          <item>
           <widget class="QFrame" name="frame_2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="minimumSize">
             <size>
              <width>0</width>
@@ -886,7 +912,7 @@
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_2">
             <property name="spacing">
-             <number>0</number>
+             <number>5</number>
             </property>
             <property name="leftMargin">
              <number>0</number>
@@ -972,8 +998,14 @@
                 <widget class="QLineEdit" name="amount">
                  <property name="minimumSize">
                   <size>
-                   <width>0</width>
+                   <width>150</width>
                    <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>100</width>
+                   <height>16777215</height>
                   </size>
                  </property>
                  <property name="placeholderText">
@@ -982,20 +1014,44 @@
                 </widget>
                </item>
                <item>
-                <widget class="QComboBox" name="payment_currency">
+                <widget class="QLabel" name="payment_currency">
                  <property name="minimumSize">
                   <size>
                    <width>80</width>
-                   <height>30</height>
+                   <height>0</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
-                   <width>16777215</width>
-                   <height>30</height>
+                   <width>80</width>
+                   <height>16777215</height>
                   </size>
                  </property>
+                 <property name="font">
+                  <font>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font-size: 700;</string>
+                 </property>
+                 <property name="text">
+                  <string>TextLabel</string>
+                 </property>
                 </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_4">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
                </item>
                <item>
                 <widget class="QDateEdit" name="payment_date">

@@ -5,6 +5,9 @@ class AccountType:
     Checking = 0
     Savings = 1
 
+    def get():
+        return [AccountType.Checking, AccountType.Savings]
+
     def code(s):
         if s == AccountType.Checking: return "checking"
         if s == AccountType.Savings: return "savings"
@@ -25,7 +28,6 @@ class BankAccountModel(Model):
         self.code = code
         self.type = AccountType.Checking
         self.currency = Currency.USD
-        self.amount = 0.0
 
     @property
     def mid(self) -> int:
@@ -51,7 +53,6 @@ class BankAccountModel(Model):
         d['code'] = self.code
         d['type'] = AccountType.code(self.type)
         d['currency'] = Currency.code(self.currency)
-        d['amount'] = self.amount
         return d
 
     def from_json(item):
@@ -59,6 +60,5 @@ class BankAccountModel(Model):
         clt.mid = item['id']
         clt.type = AccountType.decode(item['type'])
         clt.currency = Currency.decode(item['currency'])
-        clt.amount = item['amount']
 
         return clt

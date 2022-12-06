@@ -1,5 +1,6 @@
 from db.db_manager import DBManager
 from models import PaymentModel
+from typing import List
 
 class PaymentController:
     
@@ -41,13 +42,16 @@ class PaymentController:
             return PaymentController.to_model(DBManager.payments.search(DBManager.query.account == search))
         if filter == 'id':
             return PaymentController.to_model(DBManager.payments.search(DBManager.query.id == search))
-
+        if filter == 'project':
+            return PaymentController.to_model(DBManager.payments.search(DBManager.query.project == search))
+        return []
+        
     def exists(search, filter='', ignore=[]):
         clts = PaymentController.search(search, filter, ignore)
         
         return len(clts) != 0
 
-    def to_model(clts) -> list[PaymentModel]:
+    def to_model(clts) -> List[PaymentModel]:
         res = []
         for clt in clts:
             res.append(PaymentModel.from_json(clt))

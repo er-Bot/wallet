@@ -1,12 +1,13 @@
 from db.db_manager import DBManager
 from models import BankAccountModel
+from typing import List
 
 class BankAccountController:
     
     def all():
         return BankAccountController.to_model(DBManager.bank_accounts.all())
 
-    def get(id):
+    def get(id) -> BankAccountModel:
         return BankAccountController.to_model(DBManager.bank_accounts.search(DBManager.query.id == id))[0]
 
     def insert(record:BankAccountModel):
@@ -18,7 +19,7 @@ class BankAccountController:
     def delete(cid):
         DBManager.bank_accounts.remove(DBManager.query.id == cid)
 
-    def search(search, filter='ntcr', ignore=[]):
+    def search(search, filter='ntcr', ignore=[]) -> List[BankAccountModel]:
         clts = set()
 
         q = DBManager.query.id == -1
@@ -34,13 +35,13 @@ class BankAccountController:
         
         clts = BankAccountController.to_model(DBManager.bank_accounts.search(q)) 
 
-        return set(clts)
+        return list(set(clts))
 
     def exists(search, filter='ntcr', ignore=[]):
         clts = BankAccountController.search(search, filter, ignore)
         return len(clts) != 0
 
-    def to_model(clts) -> list[BankAccountModel]:
+    def to_model(clts) -> List[BankAccountModel]:
         res = []
         for clt in clts:
             res.append(BankAccountModel.from_json(clt))

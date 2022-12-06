@@ -24,7 +24,7 @@ class DashboardView(QWidget, UI_Dashboard):
 
         self.main = main
     
-    def update(self):
+    def populate(self, rid=None, filter=''):
         last_month_income = 0
         paypl = 0
         fiver = 0

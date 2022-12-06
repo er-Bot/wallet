@@ -8,8 +8,7 @@ from ui import *
 from views.table_view import TableView
 from views.yes_no_dialog import YesNoDialog
 from models import BankAccountModel, AccountType, Currency
-from controllers import BankAccountController
-
+from controllers import *
 
 class BankAccountView(TableView):
     def __init__(self, main):
@@ -70,7 +69,9 @@ class BankAccountView(TableView):
         typ_el.setTextAlignment(Qt.AlignCenter)
         self.table.setItem(r, 3, typ_el)
 
-        amt_el = QTableWidgetItem(f"{rec.amount:,.2f}")
+        pys = PaymentController.search_by(rec.id, 'account')
+        s = sum([p.amount for p in pys])
+        amt_el = QTableWidgetItem(f"{s:,.2f}")
         amt_el.setTextAlignment(Qt.AlignCenter)
         self.table.setItem(r, 4, amt_el)
 
@@ -108,13 +109,13 @@ class BankAccountView(TableView):
         app_selection.exec()
                 
     def edit_row(self, r):
-        idx = BankAccountModel.decode(self.table.cellWidget(r, 0).text())
+        idx = BankAccountModel.decode(self.table.item(r, 0).text())
         model = BankAccountController.get(idx)
         app_selection = AddEditAccountView(self, model, r)
         app_selection.exec()
 
     def remove_row(self, r):
-        cid = BankAccountModel.decode(self.table.cellWidget(r, 0).text())
+        cid = BankAccountModel.decode(self.table.item(r, 0).text())
 
         ynd = YesNoDialog(f"Are you sure to delete account [{BankAccountModel.encode(cid)}]?")
         ynd.exec()
@@ -161,6 +162,7 @@ class AddEditAccountView(QDialog, UI_AddEditAccount):
         self.code.setText(model.code.upper())
         self.atype.setCurrentText(AccountType.code(model.type).capitalize())
         self.currency.setCurrentText(Currency.code(model.currency).upper())
+        self.amount.setValidator(QDoubleValidator(decimals=2))
         self.amount.setText(f"{model.amount:,.2f}")
 
         self.logo.setText(f"Bank Account #{BankAccountModel.encode(model.id)}")

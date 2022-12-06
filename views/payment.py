@@ -7,8 +7,8 @@ from ui import *
 
 from views.table_view import TableView
 from views.yes_no_dialog import YesNoDialog
-from models import PaymentModel, Currency, ClientModel, BankAccountModel
-from controllers import PaymentController
+from models import *
+from controllers import *
 
 
 class PaymentView(TableView):
@@ -21,7 +21,7 @@ class PaymentView(TableView):
         self.title.setText("Payments")
 
         self.table.setColumnCount(7)
-        self.table.setHorizontalHeaderLabels(["ID", "Client", "Account", "Date", "Amount", "Currency", ""])
+        self.table.setHorizontalHeaderLabels(["ID", "Project", "Account", "Date", "Amount", "Currency", ""])
 
         self.table.setColumnWidth(0, 100)
         self.table.setColumnWidth(1, 100)
@@ -60,10 +60,10 @@ class PaymentView(TableView):
         nm.setTextAlignment(Qt.AlignCenter)
         self.table.setItem(r, 0, nm)
 
-        nam_el = QPushButton(ClientModel.encode(rec.client))
+        nam_el = QPushButton(ProjectModel.encode(rec.project))
         nam_el.setProperty('class', 'LinkButton')
         nam_el.setCursor(Qt.PointingHandCursor)
-        nam_el.clicked.connect(lambda: self.main.update_view("client", rec.client))
+        nam_el.clicked.connect(lambda: self.main.update_view('project', rec.project, 'id'))
         self.table.setCellWidget(r, 1, nam_el)
 
         bac_el = QPushButton(BankAccountModel.encode(rec.account))
@@ -94,11 +94,6 @@ class PaymentView(TableView):
         rb.setToolTip("Remove payment")
         rb.clicked.connect(lambda: self.remove_row(r))
         
-        eb = TableView.button(EDIT_ICON)
-        eb.setToolTip("Edit payment")
-        eb.clicked.connect(lambda: self.edit_row(r))
-
-        lay.addWidget(eb, Qt.AlignCenter)        
         lay.addWidget(rb, Qt.AlignCenter)        
         wid.setLayout(lay)
 

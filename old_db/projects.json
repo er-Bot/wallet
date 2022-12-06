@@ -1,0 +1,3395 @@
+{
+    "project_00001": {
+        "client": "client_00001",
+        "comment": "",
+        "description": "Develop an OCR to detect and recognize sums in a check.\nPython, OpenCV",
+        "due": "30-05-2021",
+        "end": "23-05-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "26-05-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 48.0,
+                "recieved": 38.400000000000006
+            }
+        ],
+        "price": 48.0,
+        "start": "23-05-2021",
+        "state": "finished",
+        "title": "Check amount recognition system"
+    },
+    "project_00002": {
+        "client": "client_00002",
+        "comment": "",
+        "description": "Implementing the trading strategy \"William's alligator\" in a python notebook, with a small report of the task.\nPython, Jupyter-Notebook, Latex, ",
+        "due": "02-06-2021",
+        "end": "31-05-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "31-05-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 90.0,
+                "recieved": 72.0
+            }
+        ],
+        "price": 90.0,
+        "start": "25-05-2021",
+        "state": "finished",
+        "title": "William's alligator assignment"
+    },
+    "project_00003": {
+        "client": "client_00003",
+        "comment": "",
+        "description": "Detect the whales type from the sound of their calls.\nPython, Keras, TensorFlow",
+        "due": "11-06-2021",
+        "end": "06-06-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "06-06-2021",
+                "fees": 2.89,
+                "method": "PayPal",
+                "paid": 58.75,
+                "recieved": 55.86
+            },
+            {
+                "currency": "$",
+                "date": "06-06-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 20.0,
+                "recieved": 16.0
+            }
+        ],
+        "price": 75.0,
+        "start": "26-05-2021",
+        "state": "finished",
+        "title": "Whale calls detection model"
+    },
+    "project_00004": {
+        "client": "client_00004",
+        "comment": "",
+        "description": "A call to install a github repo that wouldn't run in their system",
+        "due": "07-06-2021",
+        "end": "07-06-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "07-06-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 10.0,
+                "recieved": 8.0
+            }
+        ],
+        "price": 10.0,
+        "start": "07-06-2021",
+        "state": "finished",
+        "title": "Clone a github repo"
+    },
+    "project_00005": {
+        "client": "client_00003",
+        "comment": "",
+        "description": "A follow up project for the report!",
+        "due": "10-06-2021",
+        "end": "08-06-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "08-06-2021",
+                "fees": 0.69,
+                "method": "PayPal",
+                "paid": 60.0,
+                "recieved": 59.31
+            }
+        ],
+        "price": 60.0,
+        "start": "08-06-2021",
+        "state": "finished",
+        "title": "Whale's call detection : Report"
+    },
+    "project_00006": {
+        "client": "client_00002",
+        "comment": "",
+        "description": "",
+        "due": "10-06-2021",
+        "end": "10-06-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "10-06-2021",
+                "fees": 2.94,
+                "method": "PayPal",
+                "paid": 60.0,
+                "recieved": 57.06
+            }
+        ],
+        "price": 60.0,
+        "start": "10-06-2021",
+        "state": "finished",
+        "title": "Test: ATS"
+    },
+    "project_00007": {
+        "client": "client_00005",
+        "comment": "Didn't leave a review",
+        "description": "Developing a model to detect the emotion from facial expressions.\nPython, OpenCV, Keras, TensorFlow, DataBricks",
+        "due": "18-06-2021",
+        "end": "18-06-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "18-06-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 350.0,
+                "recieved": 280.0
+            }
+        ],
+        "price": 350.0,
+        "start": "11-06-2021",
+        "state": "finished",
+        "title": "Emotion Detection"
+    },
+    "project_00008": {
+        "client": "client_00006",
+        "comment": "Cancelled the Fiverr part for 15$.",
+        "description": "Solve the producer consumer problem in c using multi threads.\nC",
+        "due": "12-06-2021",
+        "end": "12-06-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "12-06-2021",
+                "fees": 1.18,
+                "method": "PayPal",
+                "paid": 20.0,
+                "recieved": 18.82
+            }
+        ],
+        "price": 35.0,
+        "start": "12-06-2021",
+        "state": "finished",
+        "title": "C Assignment: multithreading"
+    },
+    "project_00009": {
+        "client": "client_00007",
+        "comment": "",
+        "description": "",
+        "due": "16-06-2021",
+        "end": "14-06-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "14-06-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 50.0,
+                "recieved": 40.0
+            }
+        ],
+        "price": 50.0,
+        "start": "12-06-2021",
+        "state": "finished",
+        "title": "Test: Graph theory"
+    },
+    "project_00010": {
+        "client": "client_00008",
+        "comment": "",
+        "description": "Implement a model that predicts the color of black and white images.\nPython, Keras, Skimage, OpenCV, CNN",
+        "due": "20-06-2021",
+        "end": "17-06-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "17-06-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 80.0,
+                "recieved": 64.0
+            }
+        ],
+        "price": 80.0,
+        "start": "13-06-2021",
+        "state": "finished",
+        "title": "Autocolor gray images"
+    },
+    "project_00011": {
+        "client": "client_00009",
+        "comment": "",
+        "description": "Julia",
+        "due": "25-06-2021",
+        "end": "19-06-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "19-06-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 150.0,
+                "recieved": 150.0
+            }
+        ],
+        "price": 150.0,
+        "start": "17-06-2021",
+        "state": "finished",
+        "title": "Julia Assignment"
+    },
+    "project_00012": {
+        "client": "client_00002",
+        "comment": "",
+        "description": "C++",
+        "due": "18-06-2021",
+        "end": "18-06-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "18-06-2021",
+                "fees": 2.5,
+                "method": "PayPal",
+                "paid": 50.0,
+                "recieved": 47.5
+            }
+        ],
+        "price": 50.0,
+        "start": "18-06-2021",
+        "state": "finished",
+        "title": "Test: C++"
+    },
+    "project_00013": {
+        "client": "client_00010",
+        "comment": "",
+        "description": "C++ unitesting",
+        "due": "18-06-2021",
+        "end": "18-06-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "18-06-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 25.11,
+                "recieved": 25.11
+            }
+        ],
+        "price": 25.0,
+        "start": "18-06-2021",
+        "state": "finished",
+        "title": "Test: unit testing"
+    },
+    "project_00014": {
+        "client": "client_00003",
+        "comment": "",
+        "description": "",
+        "due": "30-06-2021",
+        "end": "28-06-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "28-06-2021",
+                "fees": 16.9,
+                "method": "PayPal",
+                "paid": 150.0,
+                "recieved": 133.1
+            }
+        ],
+        "price": 150.0,
+        "start": "22-06-2021",
+        "state": "finished",
+        "title": "Exam: NLP"
+    },
+    "project_00015": {
+        "client": "client_00011",
+        "comment": "",
+        "description": "Java, AWT",
+        "due": "24-06-2021",
+        "end": "24-06-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "24-06-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 125.0,
+                "recieved": 100.0
+            }
+        ],
+        "price": 125.0,
+        "start": "24-06-2021",
+        "state": "finished",
+        "title": "Test: Java colors"
+    },
+    "project_00016": {
+        "client": "client_00012",
+        "comment": "",
+        "description": "Develop an app to transfer text into a magazine font\nPython, Tkinter",
+        "due": "10-07-2021",
+        "end": "05-07-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "01-07-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 400.0,
+                "recieved": 400.0
+            }
+        ],
+        "price": 400.0,
+        "start": "01-07-2021",
+        "state": "finished",
+        "title": "Magazine styler"
+    },
+    "project_00017": {
+        "client": "client_00013",
+        "comment": "",
+        "description": "Implement algorithms in C++ to do image processing\nC++",
+        "due": "26-07-2021",
+        "end": "26-07-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "16-07-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 200.0,
+                "recieved": 160.0
+            },
+            {
+                "currency": "$",
+                "date": "26-07-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 200.0,
+                "recieved": 160.0
+            }
+        ],
+        "price": 400.0,
+        "start": "10-07-2021",
+        "state": "finished",
+        "title": "C++ : Image processing"
+    },
+    "project_00018": {
+        "client": "client_00014",
+        "comment": "",
+        "description": "Analyse reddit reviews into positive, nagative and neutral based on the intents of users.\nPython, NLP, Tensorflow",
+        "due": "11-07-2021",
+        "end": "11-07-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "11-07-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 130.0,
+                "recieved": 104.0
+            }
+        ],
+        "price": 130.0,
+        "start": "11-07-2021",
+        "state": "finished",
+        "title": "Sentimental Analysis : Reddit"
+    },
+    "project_00019": {
+        "client": "client_00015",
+        "comment": "",
+        "description": "",
+        "due": "13-07-2021",
+        "end": "13-07-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "13-07-2021",
+                "fees": 5.22,
+                "method": "PayPal",
+                "paid": 105.0,
+                "recieved": 99.78
+            }
+        ],
+        "price": 100.0,
+        "start": "13-07-2021",
+        "state": "finished",
+        "title": "Install Deepfake"
+    },
+    "project_00020": {
+        "client": "client_00016",
+        "comment": "Didn't have any clue on what to make and was offering too little for an enterprise software.",
+        "description": "",
+        "due": "16-07-2021",
+        "end": "16-07-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "16-07-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 30.0,
+                "recieved": 30.0
+            }
+        ],
+        "price": 30.0,
+        "start": "16-07-2021",
+        "state": "finished",
+        "title": "Networking"
+    },
+    "project_00021": {
+        "client": "client_00017",
+        "comment": "",
+        "description": "",
+        "due": "24-07-2021",
+        "end": "24-07-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "24-07-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 30.0,
+                "recieved": 24.0
+            }
+        ],
+        "price": 30.0,
+        "start": "20-07-2021",
+        "state": "finished",
+        "title": "Python If Else Prog"
+    },
+    "project_00022": {
+        "client": "client_00018",
+        "comment": "Python, Reinforcement Learning, DQN",
+        "description": "",
+        "due": "30-07-2021",
+        "end": "25-07-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "25-07-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 100.0,
+                "recieved": 100.0
+            }
+        ],
+        "price": 100.0,
+        "start": "21-07-2021",
+        "state": "finished",
+        "title": "DQN Algorithm for UI elements"
+    },
+    "project_00023": {
+        "client": "client_00019",
+        "comment": "",
+        "description": "",
+        "due": "02-08-2021",
+        "end": "30-07-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "30-07-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 50.0,
+                "recieved": 40.0
+            },
+            {
+                "currency": "$",
+                "date": "30-07-2021",
+                "fees": 13.8,
+                "method": "PayPal",
+                "paid": 300.0,
+                "recieved": 286.2
+            }
+        ],
+        "price": 350.0,
+        "start": "24-07-2021",
+        "state": "finished",
+        "title": "NLP : Summarization"
+    },
+    "project_00024": {
+        "client": "client_00013",
+        "comment": "Didn't pay 200$ saying she couldn't come up with the moeny until a week have passed!",
+        "description": "implement the minesweeper game in C++",
+        "due": "10-08-2021",
+        "end": "01-08-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "01-08-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 100.0,
+                "recieved": 80.0
+            }
+        ],
+        "price": 300.0,
+        "start": "01-08-2021",
+        "state": "cancelled",
+        "title": "C++ : Minesweeper"
+    },
+    "project_00025": {
+        "client": "client_00020",
+        "comment": "",
+        "description": "Implement a parser in java to evaluate sets operations and syntaxe.\nJava",
+        "due": "10-08-2021",
+        "end": "06-08-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "06-08-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 125.0,
+                "recieved": 100.0
+            },
+            {
+                "currency": "$",
+                "date": "06-08-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 200.0,
+                "recieved": 200.0
+            }
+        ],
+        "price": 300.0,
+        "start": "02-08-2021",
+        "state": "finished",
+        "title": "Java Set operations parser"
+    },
+    "project_00026": {
+        "client": "client_00021",
+        "comment": "Gave 150dh for rim.",
+        "description": "Implementation of different trading strategies.\nPython",
+        "due": "10-08-2021",
+        "end": "05-08-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "06-08-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 10.0,
+                "recieved": 8.0
+            },
+            {
+                "currency": "$",
+                "date": "09-08-2021",
+                "fees": 2.93,
+                "method": "PayPal",
+                "paid": 53.0,
+                "recieved": 50.07
+            }
+        ],
+        "price": 60.0,
+        "start": "05-08-2021",
+        "state": "finished",
+        "title": "Trading strategies"
+    },
+    "project_00027": {
+        "client": "client_00022",
+        "comment": "",
+        "description": "",
+        "due": "13-08-2021",
+        "end": "11-08-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "11-08-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 200.0,
+                "recieved": 200.0
+            }
+        ],
+        "price": 200.0,
+        "start": "06-08-2021",
+        "state": "finished",
+        "title": "Exam: C++ notions"
+    },
+    "project_00028": {
+        "client": "client_00023",
+        "comment": "",
+        "description": "",
+        "due": "30-08-2021",
+        "end": "23-08-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "23-08-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 75.0,
+                "recieved": 75.0
+            }
+        ],
+        "price": 75.0,
+        "start": "06-08-2021",
+        "state": "finished",
+        "title": "File Server Manager"
+    },
+    "project_00029": {
+        "client": "client_00018",
+        "comment": "",
+        "description": "",
+        "due": "09-08-2021",
+        "end": "09-08-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "09-08-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 50.0,
+                "recieved": 50.0
+            }
+        ],
+        "price": 50.0,
+        "start": "09-08-2021",
+        "state": "finished",
+        "title": "DQN for UI elements Web"
+    },
+    "project_00030": {
+        "client": "client_00024",
+        "comment": "",
+        "description": "Implement Solitaire game in C++",
+        "due": "18-08-2021",
+        "end": "11-08-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "11-08-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 240.0,
+                "recieved": 240.0
+            }
+        ],
+        "price": 240.0,
+        "start": "09-08-2021",
+        "state": "finished",
+        "title": "C++ Solitaire"
+    },
+    "project_00031": {
+        "client": "client_00025",
+        "comment": "",
+        "description": "",
+        "due": "10-08-2021",
+        "end": "10-08-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "10-08-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 15.0,
+                "recieved": 12.0
+            },
+            {
+                "currency": "$",
+                "date": "10-08-2021",
+                "fees": 1.18,
+                "method": "PayPal",
+                "paid": 20.0,
+                "recieved": 18.82
+            }
+        ],
+        "price": 35.0,
+        "start": "10-08-2021",
+        "state": "finished",
+        "title": "General Qsts abt algorithms"
+    },
+    "project_00032": {
+        "client": "client_00026",
+        "comment": "",
+        "description": "Implementing the simulation of Bears, Wolfs, Rabbits and Plants.\nC#, .Net, ASP.Net",
+        "due": "25-08-2021",
+        "end": "19-08-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "19-08-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 50.0,
+                "recieved": 40.0
+            },
+            {
+                "currency": "$",
+                "date": "19-08-2021",
+                "fees": 12.04,
+                "method": "PayPal",
+                "paid": 260.0,
+                "recieved": 247.96
+            }
+        ],
+        "price": 300.0,
+        "start": "10-08-2021",
+        "state": "finished",
+        "title": "C# Animal simulation"
+    },
+    "project_00033": {
+        "client": "client_00027",
+        "comment": "Somehow a colleague of him 'Tommy Yang' contacted right after",
+        "description": "",
+        "due": "12-08-2021",
+        "end": "12-08-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "12-08-2021",
+                "fees": 1.06,
+                "method": "PayPal",
+                "paid": 70.0,
+                "recieved": 68.94
+            }
+        ],
+        "price": 70.0,
+        "start": "12-08-2021",
+        "state": "finished",
+        "title": "Exam: C++ DS"
+    },
+    "project_00034": {
+        "client": "client_00028",
+        "comment": "Same project as Smriddh Bhardwaj.",
+        "description": "",
+        "due": "12-08-2021",
+        "end": "12-08-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "12-08-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 70.09,
+                "recieved": 70.09
+            }
+        ],
+        "price": 70.0,
+        "start": "12-08-2021",
+        "state": "finished",
+        "title": "Exam: C++ DS"
+    },
+    "project_00035": {
+        "client": "client_00029",
+        "comment": "",
+        "description": "",
+        "due": "13-08-2021",
+        "end": "13-08-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "13-08-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 10.0,
+                "recieved": 8.0
+            },
+            {
+                "currency": "$",
+                "date": "13-08-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 60.0,
+                "recieved": 60.0
+            }
+        ],
+        "price": 70.0,
+        "start": "13-08-2021",
+        "state": "finished",
+        "title": "Exam: C++ DS Alg"
+    },
+    "project_00036": {
+        "client": "client_00030",
+        "comment": "2nd Paypal: Yousef Aburadi",
+        "description": "Develop an app to send multiple mails at once, the user copy or select a csv file with mails then the app sends mails each 5 seconds.\nPython, Tkinter",
+        "due": "30-08-2021",
+        "end": "13-08-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "23-08-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 440.0,
+                "recieved": 440.0
+            },
+            {
+                "currency": "$",
+                "date": "23-08-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 10.0,
+                "recieved": 8.0
+            }
+        ],
+        "price": 450.0,
+        "start": "13-08-2021",
+        "state": "finished",
+        "title": "Bulk mail sender"
+    },
+    "project_00037": {
+        "client": "client_00031",
+        "comment": "",
+        "description": "",
+        "due": "28-08-2021",
+        "end": "23-08-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "23-08-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 48.0,
+                "recieved": 38.400000000000006
+            },
+            {
+                "currency": "$",
+                "date": "23-08-2021",
+                "fees": 2.76,
+                "method": "PayPal",
+                "paid": 116.0,
+                "recieved": 113.24
+            }
+        ],
+        "price": 150.0,
+        "start": "21-08-2021",
+        "state": "finished",
+        "title": "Python markdown parser"
+    },
+    "project_00038": {
+        "client": "client_00032",
+        "comment": "",
+        "description": "",
+        "due": "01-09-2021",
+        "end": "30-08-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "30-08-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 10.0,
+                "recieved": 8.0
+            },
+            {
+                "currency": "$",
+                "date": "30-08-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 190.0,
+                "recieved": 190.0
+            }
+        ],
+        "price": 200.0,
+        "start": "25-08-2021",
+        "state": "finished",
+        "title": "R VAR/ARIMA comparison"
+    },
+    "project_00039": {
+        "client": "client_00033",
+        "comment": "",
+        "description": "Make a processing rect animation that moves back and forth between the edges of the screen.",
+        "due": "30-08-2021",
+        "end": "28-08-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "28-08-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 10.0,
+                "recieved": 8.0
+            },
+            {
+                "currency": "$",
+                "date": "28-08-2021",
+                "fees": 1.62,
+                "method": "PayPal",
+                "paid": 70.0,
+                "recieved": 68.38
+            }
+        ],
+        "price": 80.0,
+        "start": "27-08-2021",
+        "state": "finished",
+        "title": "Processing: rect translator"
+    },
+    "project_00040": {
+        "client": "client_00074",
+        "comment": "Cancelled before last payment.\nMaveshop by AB in PayPal.",
+        "description": "Laravel Inventory management system",
+        "due": "15-11-2021",
+        "end": "29-10-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "27-08-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 40.31,
+                "recieved": 40.31
+            },
+            {
+                "currency": "$",
+                "date": "01-10-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 41.0,
+                "recieved": 41.0
+            },
+            {
+                "currency": "$",
+                "date": "29-10-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 237.1,
+                "recieved": 237.1
+            }
+        ],
+        "price": 400.0,
+        "start": "27-08-2021",
+        "state": "cancelled",
+        "title": "Inventory Management System"
+    },
+    "project_00041": {
+        "client": "client_00034",
+        "comment": "",
+        "description": "",
+        "due": "31-08-2021",
+        "end": "31-08-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "31-08-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 25.0,
+                "recieved": 20.0
+            },
+            {
+                "currency": "$",
+                "date": "31-08-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 100.0,
+                "recieved": 100.0
+            }
+        ],
+        "price": 125.0,
+        "start": "31-08-2021",
+        "state": "finished",
+        "title": "Answering Data science questions"
+    },
+    "project_00042": {
+        "client": "client_00035",
+        "comment": "",
+        "description": "Python, PySide6",
+        "due": "07-09-2021",
+        "end": "02-09-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "02-09-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 20.0,
+                "recieved": 16.0
+            },
+            {
+                "currency": "$",
+                "date": "02-09-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 400.0,
+                "recieved": 400.0
+            }
+        ],
+        "price": 420.0,
+        "start": "31-08-2021",
+        "state": "finished",
+        "title": "GUI: Gif Browser"
+    },
+    "project_00043": {
+        "client": "client_00025",
+        "comment": "",
+        "description": "",
+        "due": "01-09-2021",
+        "end": "01-09-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "01-09-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 5.0,
+                "recieved": 4.0
+            },
+            {
+                "currency": "$",
+                "date": "01-09-2021",
+                "fees": 5.8,
+                "method": "PayPal",
+                "paid": 125.0,
+                "recieved": 119.2
+            }
+        ],
+        "price": 130.0,
+        "start": "01-09-2021",
+        "state": "finished",
+        "title": "C++ assignments"
+    },
+    "project_00044": {
+        "client": "client_00027",
+        "comment": "",
+        "description": "",
+        "due": "03-09-2021",
+        "end": "03-09-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "03-09-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 70.0,
+                "recieved": 70.0
+            }
+        ],
+        "price": 70.0,
+        "start": "03-09-2021",
+        "state": "finished",
+        "title": "Exam: C++ DS"
+    },
+    "project_00045": {
+        "client": "client_00036",
+        "comment": "",
+        "description": "",
+        "due": "03-09-2021",
+        "end": "03-09-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "03-09-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 120.0,
+                "recieved": 120.0
+            }
+        ],
+        "price": 120.0,
+        "start": "03-09-2021",
+        "state": "finished",
+        "title": "Exam: C++ DS"
+    },
+    "project_00046": {
+        "client": "client_00037",
+        "comment": "",
+        "description": "",
+        "due": "03-09-2021",
+        "end": "03-09-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "03-09-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 50.0,
+                "recieved": 40.0
+            }
+        ],
+        "price": 50.0,
+        "start": "03-09-2021",
+        "state": "finished",
+        "title": "Loss landscape visualisation"
+    },
+    "project_00047": {
+        "client": "client_00038",
+        "comment": "",
+        "description": "Develop a wifi scanner that enable the user to connect and disconnect from nearby wifis.\nPython, PySide6",
+        "due": "30-09-2021",
+        "end": "28-09-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "28-09-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 65.0,
+                "recieved": 52.0
+            },
+            {
+                "currency": "$",
+                "date": "28-09-2021",
+                "fees": 7.64,
+                "method": "PayPal",
+                "paid": 160.0,
+                "recieved": 152.36
+            }
+        ],
+        "price": 150.0,
+        "start": "22-09-2021",
+        "state": "finished",
+        "title": "Wifi Scanner"
+    },
+    "project_00048": {
+        "client": "client_00018",
+        "comment": "",
+        "description": "",
+        "due": "05-10-2021",
+        "end": "01-10-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "01-10-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 100.0,
+                "recieved": 100.0
+            }
+        ],
+        "price": 100.0,
+        "start": "29-09-2021",
+        "state": "finished",
+        "title": "UI DQN : report"
+    },
+    "project_00049": {
+        "client": "client_00039",
+        "comment": "",
+        "description": "Segment images of cells into individual cells.\nPython, OpenCV",
+        "due": "10-10-2021",
+        "end": "02-10-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "02-10-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 10.0,
+                "recieved": 8.0
+            },
+            {
+                "currency": "$",
+                "date": "02-10-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 200.0,
+                "recieved": 200.0
+            }
+        ],
+        "price": 210.0,
+        "start": "28-09-2021",
+        "state": "finished",
+        "title": "Cell Segmentation"
+    },
+    "project_00050": {
+        "client": "client_00035",
+        "comment": "",
+        "description": "performance optimization",
+        "due": "07-10-2021",
+        "end": "02-10-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "02-10-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 115.0,
+                "recieved": 115.0
+            }
+        ],
+        "price": 115.0,
+        "start": "30-09-2021",
+        "state": "finished",
+        "title": "GUI: Gif Browser"
+    },
+    "project_00051": {
+        "client": "client_00040",
+        "comment": "",
+        "description": "",
+        "due": "14-10-2021",
+        "end": "12-10-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "12-10-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 10.0,
+                "recieved": 8.0
+            },
+            {
+                "currency": "$",
+                "date": "12-10-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 70.0,
+                "recieved": 70.0
+            }
+        ],
+        "price": 80.0,
+        "start": "11-10-2021",
+        "state": "finished",
+        "title": "Python assignment"
+    },
+    "project_00052": {
+        "client": "client_00041",
+        "comment": "couldn't use paypal",
+        "description": "Detect regions where patients need to implement hair.\nPython, OpenCV",
+        "due": "20-10-2021",
+        "end": "17-10-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "12-10-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 50.0,
+                "recieved": 40.0
+            },
+            {
+                "currency": "$",
+                "date": "15-10-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 190.0,
+                "recieved": 152.0
+            }
+        ],
+        "price": 200.0,
+        "start": "12-10-2021",
+        "state": "finished",
+        "title": "Hair implent"
+    },
+    "project_00053": {
+        "client": "client_00031",
+        "comment": "",
+        "description": "",
+        "due": "20-10-2021",
+        "end": "13-10-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "16-10-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 20.0,
+                "recieved": 16.0
+            },
+            {
+                "currency": "$",
+                "date": "17-10-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 180.0,
+                "recieved": 180.0
+            },
+            {
+                "currency": "$",
+                "date": "18-10-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 50.0,
+                "recieved": 50.0
+            },
+            {
+                "currency": "$",
+                "date": "18-10-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 10.0,
+                "recieved": 8.0
+            }
+        ],
+        "price": 360.0,
+        "start": "13-10-2021",
+        "state": "finished",
+        "title": "Assignement: Recommender System"
+    },
+    "project_00054": {
+        "client": "client_00042",
+        "comment": "",
+        "description": "",
+        "due": "21-10-2021",
+        "end": "21-10-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "21-10-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 10.0,
+                "recieved": 8.0
+            },
+            {
+                "currency": "$",
+                "date": "21-10-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 65.0,
+                "recieved": 65.0
+            }
+        ],
+        "price": 75.0,
+        "start": "21-10-2021",
+        "state": "finished",
+        "title": "C project: arrays"
+    },
+    "project_00055": {
+        "client": "client_00043",
+        "comment": "",
+        "description": "",
+        "due": "30-10-2021",
+        "end": "27-10-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "27-10-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 100.0,
+                "recieved": 100.0
+            }
+        ],
+        "price": 100.0,
+        "start": "26-10-2021",
+        "state": "finished",
+        "title": "Algorithm correctness Proofs"
+    },
+    "project_00056": {
+        "client": "client_00042",
+        "comment": "",
+        "description": "",
+        "due": "27-10-2021",
+        "end": "27-10-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "27-10-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 5.0,
+                "recieved": 4.0
+            },
+            {
+                "currency": "$",
+                "date": "27-10-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 50.0,
+                "recieved": 50.0
+            }
+        ],
+        "price": 55.0,
+        "start": "27-10-2021",
+        "state": "finished",
+        "title": "Exam: C & Matlab"
+    },
+    "project_00057": {
+        "client": "client_00044",
+        "comment": "",
+        "description": "",
+        "due": "15-11-2021",
+        "end": "12-11-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "07-11-2021",
+                "fees": 0.01,
+                "method": "PayPal",
+                "paid": 100.0,
+                "recieved": 99.99
+            },
+            {
+                "currency": "$",
+                "date": "12-11-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 70.0,
+                "recieved": 70.0
+            },
+            {
+                "currency": "$",
+                "date": "12-11-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 10.0,
+                "recieved": 8.0
+            }
+        ],
+        "price": 100.0,
+        "start": "06-11-2021",
+        "state": "finished",
+        "title": "C struct Assignment"
+    },
+    "project_00058": {
+        "client": "client_00045",
+        "comment": "",
+        "description": "",
+        "due": "18-11-2021",
+        "end": "18-11-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "18-11-2021",
+                "fees": 2.5,
+                "method": "PayPal",
+                "paid": 50.0,
+                "recieved": 47.5
+            },
+            {
+                "currency": "$",
+                "date": "18-11-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 60.0,
+                "recieved": 60.0
+            },
+            {
+                "currency": "$",
+                "date": "18-11-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 10.0,
+                "recieved": 8.0
+            }
+        ],
+        "price": 120.0,
+        "start": "09-11-2021",
+        "state": "finished",
+        "title": "Flicker Logo 27 Classification"
+    },
+    "project_00059": {
+        "client": "client_00046",
+        "comment": "",
+        "description": "",
+        "due": "15-11-2023",
+        "end": "13-11-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "13-11-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 40.0,
+                "recieved": 32.0
+            }
+        ],
+        "price": 40.0,
+        "start": "09-11-2021",
+        "state": "finished",
+        "title": "Python differential equations"
+    },
+    "project_00060": {
+        "client": "client_00047",
+        "comment": "",
+        "description": "Python",
+        "due": "12-11-2021",
+        "end": "12-11-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "12-11-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 116.67,
+                "recieved": 116.67
+            }
+        ],
+        "price": 115.0,
+        "start": "12-11-2021",
+        "state": "finished",
+        "title": "ResNet assignment"
+    },
+    "project_00061": {
+        "client": "client_00047",
+        "comment": "",
+        "description": "",
+        "due": "17-11-2021",
+        "end": "17-11-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "17-11-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 140.0,
+                "recieved": 140.0
+            }
+        ],
+        "price": 140.0,
+        "start": "17-11-2021",
+        "state": "finished",
+        "title": "Exam: NN Improvement"
+    },
+    "project_00062": {
+        "client": "client_00048",
+        "comment": "",
+        "description": "",
+        "due": "25-11-2021",
+        "end": "18-11-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "17-11-2021",
+                "fees": 6.9,
+                "method": "PayPal",
+                "paid": 150.0,
+                "recieved": 143.1
+            },
+            {
+                "currency": "$",
+                "date": "18-11-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 10.0,
+                "recieved": 8.0
+            },
+            {
+                "currency": "$",
+                "date": "18-11-2021",
+                "fees": 7.12,
+                "method": "PayPal",
+                "paid": 155.0,
+                "recieved": 147.88
+            }
+        ],
+        "price": 300.0,
+        "start": "17-11-2021",
+        "state": "finished",
+        "title": "Fly trajectory generative model"
+    },
+    "project_00063": {
+        "client": "client_00049",
+        "comment": "Asked for refund",
+        "description": "",
+        "due": "25-11-2021",
+        "end": "16-11-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "20-11-2021",
+                "fees": 11.6,
+                "method": "PayPal",
+                "paid": 250.0,
+                "recieved": 238.4
+            }
+        ],
+        "price": 250.0,
+        "start": "16-11-2021",
+        "state": "cancelled",
+        "title": "Swin Transformer for BraTS"
+    },
+    "project_00064": {
+        "client": "client_00044",
+        "comment": "",
+        "description": "",
+        "due": "27-11-2021",
+        "end": "25-11-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "25-11-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 140.0,
+                "recieved": 140.0
+            }
+        ],
+        "price": 140.0,
+        "start": "24-11-2021",
+        "state": "finished",
+        "title": "C struct Assignment"
+    },
+    "project_00065": {
+        "client": "client_00050",
+        "comment": "",
+        "description": "",
+        "due": "25-11-2021",
+        "end": "25-11-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "25-11-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 100.0,
+                "recieved": 100.0
+            }
+        ],
+        "price": 100.0,
+        "start": "25-11-2021",
+        "state": "finished",
+        "title": "P5js Drawing App"
+    },
+    "project_00066": {
+        "client": "client_00044",
+        "comment": "",
+        "description": "",
+        "due": "03-12-2021",
+        "end": "02-12-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "02-12-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 100.0,
+                "recieved": 100.0
+            },
+            {
+                "currency": "$",
+                "date": "02-12-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 20.0,
+                "recieved": 16.0
+            }
+        ],
+        "price": 120.0,
+        "start": "01-12-2021",
+        "state": "finished",
+        "title": "C struct Assignment"
+    },
+    "project_00067": {
+        "client": "client_00045",
+        "comment": "",
+        "description": "",
+        "due": "03-12-2021",
+        "end": "03-12-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "03-12-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 120.17,
+                "recieved": 120.17
+            }
+        ],
+        "price": 120.0,
+        "start": "03-12-2021",
+        "state": "finished",
+        "title": "RL assignment"
+    },
+    "project_00068": {
+        "client": "client_00044",
+        "comment": "",
+        "description": "",
+        "due": "07-12-2021",
+        "end": "07-12-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "07-12-2021",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 5.0,
+                "recieved": 4.0
+            },
+            {
+                "currency": "$",
+                "date": "07-12-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 120.0,
+                "recieved": 120.0
+            }
+        ],
+        "price": 125.0,
+        "start": "07-12-2021",
+        "state": "finished",
+        "title": "C struct Assignment"
+    },
+    "project_00069": {
+        "client": "client_00051",
+        "comment": "",
+        "description": "\t\t\t\t\t\t",
+        "due": "20-10-2021",
+        "end": "10-10-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "10-10-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 50.0,
+                "recieved": 50.0
+            },
+            {
+                "currency": "$",
+                "date": "15-10-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 90.31,
+                "recieved": 90.31
+            }
+        ],
+        "price": 140.0,
+        "start": "10-10-2021",
+        "state": "finished",
+        "title": "Cats vs dogs resnet"
+    },
+    "project_00070": {
+        "client": "client_00044",
+        "comment": "",
+        "description": "",
+        "due": "10-12-2021",
+        "end": "10-12-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "10-12-2021",
+                "fees": 4.7,
+                "method": "PayPal",
+                "paid": 100.0,
+                "recieved": 95.3
+            }
+        ],
+        "price": 100.0,
+        "start": "10-12-2021",
+        "state": "finished",
+        "title": "C struct Assignment"
+    },
+    "project_00071": {
+        "client": "client_00043",
+        "comment": "",
+        "description": "",
+        "due": "12-12-2021",
+        "end": "12-12-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "12-12-2021",
+                "fees": 3.78,
+                "method": "PayPal",
+                "paid": 130.0,
+                "recieved": 126.22
+            }
+        ],
+        "price": 130.0,
+        "start": "12-12-2021",
+        "state": "finished",
+        "title": "Assignment fastSelect complexity"
+    },
+    "project_00072": {
+        "client": "client_00044",
+        "comment": "",
+        "description": "",
+        "due": "13-12-2021",
+        "end": "13-12-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "13-12-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 101.34,
+                "recieved": 101.34
+            }
+        ],
+        "price": 100.0,
+        "start": "13-12-2021",
+        "state": "finished",
+        "title": "Exam C debugging and Walktrough"
+    },
+    "project_00073": {
+        "client": "client_00051",
+        "comment": "",
+        "description": "",
+        "due": "16-12-2021",
+        "end": "16-12-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "16-12-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 84.01,
+                "recieved": 84.01
+            }
+        ],
+        "price": 80.0,
+        "start": "16-12-2021",
+        "state": "finished",
+        "title": "Java report"
+    },
+    "project_00074": {
+        "client": "client_00052",
+        "comment": "didn't pay second part",
+        "description": "",
+        "due": "19-12-2021",
+        "end": "19-12-2021",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "19-12-2021",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 107.12,
+                "recieved": 107.12
+            }
+        ],
+        "price": 200.0,
+        "start": "19-12-2021",
+        "state": "cancelled",
+        "title": "Exam : DL"
+    },
+    "project_00075": {
+        "client": "client_00053",
+        "comment": "Time between first and second payment was too long the project was dropped!\nPaypal payment was in Euros, 42.08 EUR",
+        "description": "C++ app to create themes and apply them in an input file\nC++, Qt",
+        "due": "01-03-2022",
+        "end": "25-02-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "13-02-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 47.0,
+                "recieved": 37.6
+            },
+            {
+                "currency": "$",
+                "date": "25-02-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 44.49,
+                "recieved": 44.49
+            }
+        ],
+        "price": 120.0,
+        "start": "12-02-2022",
+        "state": "cancelled",
+        "title": "Qt Color Theme Changer"
+    },
+    "project_00076": {
+        "client": "client_00051",
+        "comment": "",
+        "description": "A comparaison of different methods used for fish classification",
+        "due": "16-02-2022",
+        "end": "16-02-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "16-02-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 20.0,
+                "recieved": 16.0
+            },
+            {
+                "currency": "$",
+                "date": "16-02-2022",
+                "fees": 2.5,
+                "method": "PayPal",
+                "paid": 50.0,
+                "recieved": 47.5
+            }
+        ],
+        "price": 70.0,
+        "start": "16-02-2022",
+        "state": "finished",
+        "title": "Fish Classification Review"
+    },
+    "project_00077": {
+        "client": "client_00054",
+        "comment": "",
+        "description": "Just a basic question about the difference between the two.",
+        "due": "18-02-2022",
+        "end": "18-02-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "18-02-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 5.0,
+                "recieved": 4.0
+            }
+        ],
+        "price": 5.0,
+        "start": "18-02-2022",
+        "state": "finished",
+        "title": "ROC vs Confusion matrix"
+    },
+    "project_00078": {
+        "client": "client_00050",
+        "comment": "",
+        "description": "Drag the mouse over an image to denoise it.",
+        "due": "24-02-2022",
+        "end": "19-02-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "19-02-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 25.0,
+                "recieved": 20.0
+            },
+            {
+                "currency": "$",
+                "date": "19-02-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 75.0,
+                "recieved": 75.0
+            }
+        ],
+        "price": 100.0,
+        "start": "18-02-2022",
+        "state": "finished",
+        "title": "Processing Noise Filter"
+    },
+    "project_00079": {
+        "client": "client_00054",
+        "comment": "",
+        "description": "Python, XGBoost, RandomForest, ScikitLearn",
+        "due": "24-02-2022",
+        "end": "24-02-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "24-02-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 85.0,
+                "recieved": 68.0
+            }
+        ],
+        "price": 85.0,
+        "start": "24-02-2022",
+        "state": "finished",
+        "title": "Binary Classification with Random Forest and XGBoost"
+    },
+    "project_00080": {
+        "client": "client_00050",
+        "comment": "",
+        "description": "A flowfield with multiple vortices that reshape around the mouse.\nProcessing",
+        "due": "10-03-2022",
+        "end": "07-03-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "07-03-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 40.0,
+                "recieved": 32.0
+            },
+            {
+                "currency": "$",
+                "date": "07-03-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 80.0,
+                "recieved": 80.0
+            }
+        ],
+        "price": 120.0,
+        "start": "06-03-2022",
+        "state": "finished",
+        "title": "Noise FlowField"
+    },
+    "project_00081": {
+        "client": "client_00054",
+        "comment": "",
+        "description": "",
+        "due": "15-03-2022",
+        "end": "09-03-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "09-03-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 25.0,
+                "recieved": 20.0
+            },
+            {
+                "currency": "$",
+                "date": "09-03-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 75.0,
+                "recieved": 75.0
+            },
+            {
+                "currency": "$",
+                "date": "13-03-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 30.0,
+                "recieved": 30.0
+            }
+        ],
+        "price": 130.0,
+        "start": "09-03-2022",
+        "state": "finished",
+        "title": "Binary Classification with Random Forest and XGBoost : retouches"
+    },
+    "project_00082": {
+        "client": "client_00055",
+        "comment": "",
+        "description": "Python, Keras, TensorFlow, LSTM, GRU",
+        "due": "15-03-2022",
+        "end": "11-03-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "11-03-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 25.0,
+                "recieved": 20.0
+            },
+            {
+                "currency": "$",
+                "date": "11-03-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 200.0,
+                "recieved": 200.0
+            }
+        ],
+        "price": 225.0,
+        "start": "09-03-2022",
+        "state": "finished",
+        "title": "Price Prediction : LSTM & GRU"
+    },
+    "project_00083": {
+        "client": "client_00056",
+        "comment": "",
+        "description": "A full research project, with implementation and report.\nPython, SVM, CNN, OpenCV",
+        "due": "27-04-2022",
+        "end": "09-04-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "12-03-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 50.0,
+                "recieved": 40.0
+            },
+            {
+                "currency": "$",
+                "date": "17-03-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 80.0,
+                "recieved": 64.0
+            },
+            {
+                "currency": "$",
+                "date": "01-04-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 70.0,
+                "recieved": 56.0
+            },
+            {
+                "currency": "$",
+                "date": "09-04-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 70.0,
+                "recieved": 56.0
+            }
+        ],
+        "price": 350.0,
+        "start": "11-03-2022",
+        "state": "cancelled",
+        "title": "Eye disease detection"
+    },
+    "project_00084": {
+        "client": "client_00051",
+        "comment": "",
+        "description": "Python",
+        "due": "20-03-2022",
+        "end": "15-03-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "15-03-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 10.0,
+                "recieved": 8.0
+            },
+            {
+                "currency": "$",
+                "date": "15-03-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 140.0,
+                "recieved": 140.0
+            }
+        ],
+        "price": 150.0,
+        "start": "13-03-2022",
+        "state": "finished",
+        "title": "Bitcoin Prediction LSTM vs. GRU"
+    },
+    "project_00085": {
+        "client": "client_00053",
+        "comment": "",
+        "description": "C++, ECC",
+        "due": "28-03-2022",
+        "end": "24-03-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "24-03-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 10.0,
+                "recieved": 8.0
+            },
+            {
+                "currency": "$",
+                "date": "24-03-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 140.0,
+                "recieved": 140.0
+            }
+        ],
+        "price": 150.0,
+        "start": "21-03-2022",
+        "state": "finished",
+        "title": "Hadamard ECC"
+    },
+    "project_00086": {
+        "client": "client_00055",
+        "comment": "",
+        "description": "Python, Lasso, Ridge, LinearRegression, XGBoost",
+        "due": "24-03-2022",
+        "end": "24-03-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "24-03-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 10.0,
+                "recieved": 8.0
+            },
+            {
+                "currency": "$",
+                "date": "24-03-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 240.0,
+                "recieved": 240.0
+            }
+        ],
+        "price": 250.0,
+        "start": "24-03-2022",
+        "state": "finished",
+        "title": "Price Prediction : LASSO & XGBOOST"
+    },
+    "project_00087": {
+        "client": "client_00050",
+        "comment": "",
+        "description": "Processing",
+        "due": "25-03-2022",
+        "end": "25-03-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "25-03-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 125.0,
+                "recieved": 125.0
+            }
+        ],
+        "price": 125.0,
+        "start": "25-03-2022",
+        "state": "finished",
+        "title": "Sound Visualisation"
+    },
+    "project_00088": {
+        "client": "client_00057",
+        "comment": "",
+        "description": "C++, Qt, OpenGL",
+        "due": "30-03-2022",
+        "end": "28-03-2022",
+        "payments": [
+            {
+                "currency": "MAD",
+                "date": "28-03-2022",
+                "fees": 0.0,
+                "method": "CIH",
+                "paid": 2500.0,
+                "recieved": 2500.0
+            }
+        ],
+        "price": 2500.0,
+        "start": "25-03-2022",
+        "state": "finished",
+        "title": "QT 3D Editor"
+    },
+    "project_00089": {
+        "client": "client_00058",
+        "comment": "",
+        "description": "Full project: Code + Report\nPython, TTS",
+        "due": "28-04-2022",
+        "end": "07-04-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "31-03-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 70.0,
+                "recieved": 56.0
+            },
+            {
+                "currency": "$",
+                "date": "07-04-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 80.0,
+                "recieved": 64.0
+            }
+        ],
+        "price": 560.0,
+        "start": "28-03-2022",
+        "state": "cancelled",
+        "title": "Speech to Text Synthesis"
+    },
+    "project_00090": {
+        "client": "client_00054",
+        "comment": "",
+        "description": "",
+        "due": "31-03-2022",
+        "end": "31-03-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "31-03-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 14.0,
+                "recieved": 14.0
+            },
+            {
+                "currency": "$",
+                "date": "31-03-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 131.0,
+                "recieved": 131.0
+            }
+        ],
+        "price": 145.0,
+        "start": "31-03-2022",
+        "state": "finished",
+        "title": "Test: ML"
+    },
+    "project_00091": {
+        "client": "client_00059",
+        "comment": "",
+        "description": "",
+        "due": "05-04-2022",
+        "end": "01-04-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "01-04-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 300.0,
+                "recieved": 240.0
+            },
+            {
+                "currency": "$",
+                "date": "01-04-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 314.55,
+                "recieved": 314.55
+            }
+        ],
+        "price": 300.0,
+        "start": "31-03-2022",
+        "state": "finished",
+        "title": "ML test"
+    },
+    "project_00092": {
+        "client": "client_00053",
+        "comment": "",
+        "description": "",
+        "due": "07-04-2022",
+        "end": "03-04-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "03-04-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 5.0,
+                "recieved": 4.0
+            },
+            {
+                "currency": "$",
+                "date": "03-04-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 175.01,
+                "recieved": 175.01
+            }
+        ],
+        "price": 180.0,
+        "start": "01-04-2022",
+        "state": "finished",
+        "title": "QT 3d Editor"
+    },
+    "project_00093": {
+        "client": "client_00055",
+        "comment": "",
+        "description": "",
+        "due": "11-04-2022",
+        "end": "07-04-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "07-04-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 250.0,
+                "recieved": 250.0
+            }
+        ],
+        "price": 250.0,
+        "start": "04-04-2022",
+        "state": "finished",
+        "title": "Price Prediction : Super Learner"
+    },
+    "project_00094": {
+        "client": "client_00060",
+        "comment": "",
+        "description": "Just discussing the mod and what's going on",
+        "due": "08-04-2022",
+        "end": "08-04-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "08-04-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 30.0,
+                "recieved": 24.0
+            }
+        ],
+        "price": 30.0,
+        "start": "08-04-2022",
+        "state": "finished",
+        "title": "WOWLK mod"
+    },
+    "project_00095": {
+        "client": "client_00044",
+        "comment": "Didn't pay the second part of 200$, saying he can't afford until a week after submission!",
+        "description": "",
+        "due": "15-04-2022",
+        "end": "11-04-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "11-04-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 200.76,
+                "recieved": 200.76
+            }
+        ],
+        "price": 400.0,
+        "start": "08-04-2022",
+        "state": "cancelled",
+        "title": "C++ OOP"
+    },
+    "project_00096": {
+        "client": "client_00059",
+        "comment": "",
+        "description": "",
+        "due": "09-04-2022",
+        "end": "09-04-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "09-04-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 200.0,
+                "recieved": 200.0
+            }
+        ],
+        "price": 200.0,
+        "start": "09-04-2022",
+        "state": "finished",
+        "title": "AI assignment"
+    },
+    "project_00097": {
+        "client": "client_00061",
+        "comment": "",
+        "description": "R",
+        "due": "13-04-2022",
+        "end": "13-04-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "13-04-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 200.0,
+                "recieved": 200.0
+            }
+        ],
+        "price": 200.0,
+        "start": "13-04-2022",
+        "state": "finished",
+        "title": "Exam: R visualisation"
+    },
+    "project_00098": {
+        "client": "client_00055",
+        "comment": "",
+        "description": "",
+        "due": "17-04-2022",
+        "end": "17-04-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "17-04-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 120.0,
+                "recieved": 120.0
+            }
+        ],
+        "price": 120.0,
+        "start": "17-04-2022",
+        "state": "finished",
+        "title": "Price Prediction : Super Learner refinement"
+    },
+    "project_00099": {
+        "client": "client_00062",
+        "comment": "",
+        "description": "",
+        "due": "21-04-2022",
+        "end": "19-04-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "19-04-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 500.0,
+                "recieved": 500.0
+            }
+        ],
+        "price": 500.0,
+        "start": "17-04-2022",
+        "state": "finished",
+        "title": "Python visualization"
+    },
+    "project_00100": {
+        "client": "client_00063",
+        "comment": "",
+        "description": "Python",
+        "due": "23-04-2022",
+        "end": "21-04-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "21-04-2022",
+                "fees": 9.4,
+                "method": "PayPal",
+                "paid": 200.0,
+                "recieved": 190.6
+            }
+        ],
+        "price": 200.0,
+        "start": "20-04-2022",
+        "state": "finished",
+        "title": "ISAR classification"
+    },
+    "project_00101": {
+        "client": "client_00062",
+        "comment": "",
+        "description": "",
+        "due": "30-04-2022",
+        "end": "26-04-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "28-04-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 20.0,
+                "recieved": 16.0
+            },
+            {
+                "currency": "$",
+                "date": "28-04-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 300.0,
+                "recieved": 300.0
+            }
+        ],
+        "price": 320.0,
+        "start": "26-04-2022",
+        "state": "finished",
+        "title": "Python visualization : Fixes"
+    },
+    "project_00102": {
+        "client": "client_00059",
+        "comment": "",
+        "description": "",
+        "due": "03-05-2022",
+        "end": "03-05-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "03-05-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 600.0,
+                "recieved": 600.0
+            }
+        ],
+        "price": 600.0,
+        "start": "03-05-2022",
+        "state": "finished",
+        "title": "AI assignment"
+    },
+    "project_00103": {
+        "client": "client_00059",
+        "comment": "",
+        "description": "",
+        "due": "05-05-2022",
+        "end": "05-05-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "05-05-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 30.0,
+                "recieved": 24.0
+            },
+            {
+                "currency": "$",
+                "date": "05-05-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 400.0,
+                "recieved": 400.0
+            }
+        ],
+        "price": 400.0,
+        "start": "05-05-2022",
+        "state": "finished",
+        "title": "DB Exam"
+    },
+    "project_00104": {
+        "client": "client_00062",
+        "comment": "",
+        "description": "",
+        "due": "05-05-2022",
+        "end": "09-05-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "05-05-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 20.0,
+                "recieved": 16.0
+            },
+            {
+                "currency": "$",
+                "date": "05-05-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 400.0,
+                "recieved": 400.0
+            }
+        ],
+        "price": 400.0,
+        "start": "05-05-2022",
+        "state": "finished",
+        "title": "DB Exam"
+    },
+    "project_00105": {
+        "client": "client_00064",
+        "comment": "",
+        "description": "Python",
+        "due": "09-05-2022",
+        "end": "09-05-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "09-05-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 23.0,
+                "recieved": 18.400000000000002
+            }
+        ],
+        "price": 23.0,
+        "start": "09-05-2022",
+        "state": "finished",
+        "title": "File changing"
+    },
+    "project_00106": {
+        "client": "client_00065",
+        "comment": "",
+        "description": "",
+        "due": "11-05-2022",
+        "end": "11-05-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "11-05-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 20.0,
+                "recieved": 16.0
+            },
+            {
+                "currency": "$",
+                "date": "11-05-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 15.0,
+                "recieved": 12.0
+            }
+        ],
+        "price": 35.0,
+        "start": "11-05-2022",
+        "state": "finished",
+        "title": "C++ OOP"
+    },
+    "project_00107": {
+        "client": "client_00059",
+        "comment": "",
+        "description": "",
+        "due": "12-05-2022",
+        "end": "12-05-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "12-05-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 500.0,
+                "recieved": 500.0
+            },
+            {
+                "currency": "$",
+                "date": "31-05-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 50.0,
+                "recieved": 40.0
+            }
+        ],
+        "price": 500.0,
+        "start": "12-05-2022",
+        "state": "finished",
+        "title": "Architecture & OS Exam"
+    },
+    "project_00108": {
+        "client": "client_00066",
+        "comment": "",
+        "description": "",
+        "due": "18-05-2022",
+        "end": "18-05-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "18-05-2022",
+                "fees": 12.13,
+                "method": "PayPal",
+                "paid": 262.0,
+                "recieved": 249.87
+            }
+        ],
+        "price": 250.0,
+        "start": "18-05-2022",
+        "state": "finished",
+        "title": "Installing rJava"
+    },
+    "project_00109": {
+        "client": "client_00067",
+        "comment": "",
+        "description": "",
+        "due": "19-05-2022",
+        "end": "19-05-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "19-05-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 60.0,
+                "recieved": 48.0
+            },
+            {
+                "currency": "$",
+                "date": "19-05-2022",
+                "fees": 9.1,
+                "method": "PayPal",
+                "paid": 200.0,
+                "recieved": 190.9
+            }
+        ],
+        "price": 260.0,
+        "start": "19-05-2022",
+        "state": "finished",
+        "title": "AI test"
+    },
+    "project_00110": {
+        "client": "client_00068",
+        "comment": "",
+        "description": "",
+        "due": "11-06-2022",
+        "end": "11-06-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "11-06-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 75.0,
+                "recieved": 60.0
+            }
+        ],
+        "price": 75.0,
+        "start": "09-06-2022",
+        "state": "finished",
+        "title": "Julia Assignment"
+    },
+    "project_00111": {
+        "client": "client_00069",
+        "comment": "",
+        "description": "",
+        "due": "14-06-2022",
+        "end": "14-06-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "14-06-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 20.0,
+                "recieved": 16.0
+            },
+            {
+                "currency": "$",
+                "date": "14-06-2022",
+                "fees": 8.66,
+                "method": "PayPal",
+                "paid": 190.0,
+                "recieved": 181.34
+            }
+        ],
+        "price": 200.0,
+        "start": "14-06-2022",
+        "state": "finished",
+        "title": "DL Exam"
+    },
+    "project_00112": {
+        "client": "client_00070",
+        "comment": "",
+        "description": "",
+        "due": "15-06-2022",
+        "end": "15-06-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "15-06-2022",
+                "fees": 4.7,
+                "method": "PayPal",
+                "paid": 100.0,
+                "recieved": 95.3
+            }
+        ],
+        "price": 100.0,
+        "start": "15-06-2022",
+        "state": "finished",
+        "title": "Julia Optimization"
+    },
+    "project_00113": {
+        "client": "client_00071",
+        "comment": "",
+        "description": "",
+        "due": "26-06-2022",
+        "end": "18-06-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "24-06-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 450.0,
+                "recieved": 360.0
+            }
+        ],
+        "price": 450.0,
+        "start": "18-06-2022",
+        "state": "finished",
+        "title": "PROMULA to Python"
+    },
+    "project_00114": {
+        "client": "client_00059",
+        "comment": "",
+        "description": "",
+        "due": "27-06-2022",
+        "end": "27-06-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "27-06-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 750.0,
+                "recieved": 750.0
+            },
+            {
+                "currency": "$",
+                "date": "27-06-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 750.0,
+                "recieved": 750.0
+            }
+        ],
+        "price": 1500.0,
+        "start": "24-06-2022",
+        "state": "finished",
+        "title": "DB exam cheating allibi"
+    },
+    "project_00115": {
+        "client": "client_00071",
+        "comment": "",
+        "description": "",
+        "due": "30-06-2022",
+        "end": "28-06-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "28-06-2022",
+                "fees": 20.1,
+                "method": "PayPal",
+                "paid": 450.0,
+                "recieved": 429.9
+            }
+        ],
+        "price": 450.0,
+        "start": "24-06-2022",
+        "state": "finished",
+        "title": "PROMULA to Octave"
+    },
+    "project_00116": {
+        "client": "client_00067",
+        "comment": "",
+        "description": "Code + Report",
+        "due": "21-08-2022",
+        "end": "05-08-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "29-06-2022",
+                "fees": 9.1,
+                "method": "PayPal",
+                "paid": 200.0,
+                "recieved": 190.9
+            },
+            {
+                "currency": "$",
+                "date": "14-07-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 400.0,
+                "recieved": 400.0
+            },
+            {
+                "currency": "$",
+                "date": "26-07-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 300.0,
+                "recieved": 300.0
+            },
+            {
+                "currency": "$",
+                "date": "05-08-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 300.0,
+                "recieved": 300.0
+            }
+        ],
+        "price": 1200.0,
+        "start": "29-06-2022",
+        "state": "finished",
+        "title": "Parking Space Detection"
+    },
+    "project_00117": {
+        "client": "client_00072",
+        "comment": "",
+        "description": "",
+        "due": "08-07-2022",
+        "end": "08-07-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "08-07-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 250.0,
+                "recieved": 250.0
+            }
+        ],
+        "price": 250.0,
+        "start": "08-07-2022",
+        "state": "finished",
+        "title": "R Exam"
+    },
+    "project_00118": {
+        "client": "client_00072",
+        "comment": "",
+        "description": "",
+        "due": "22-07-2022",
+        "end": "22-07-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "22-07-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 250.0,
+                "recieved": 250.0
+            }
+        ],
+        "price": 250.0,
+        "start": "22-07-2022",
+        "state": "finished",
+        "title": "R Exam : retake"
+    },
+    "project_00119": {
+        "client": "client_00059",
+        "comment": "",
+        "description": "Didn't submit at time the previous time",
+        "due": "27-08-2022",
+        "end": "25-08-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "26-08-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 800.75,
+                "recieved": 800.75
+            },
+            {
+                "currency": "$",
+                "date": "25-08-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 80.0,
+                "recieved": 64.0
+            },
+            {
+                "currency": "$",
+                "date": "25-08-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 80.0,
+                "recieved": 64.0
+            }
+        ],
+        "price": 800.0,
+        "start": "24-08-2022",
+        "state": "finished",
+        "title": "ML Exam : retake"
+    },
+    "project_00120": {
+        "client": "client_00075",
+        "comment": "",
+        "description": "",
+        "due": "02-09-2022",
+        "end": "02-09-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "02-09-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 15.0,
+                "recieved": 12.0
+            }
+        ],
+        "price": 15.0,
+        "start": "01-09-2022",
+        "state": "finished",
+        "title": "List to Set complexity"
+    },
+    "project_00121": {
+        "client": "client_00073",
+        "comment": "",
+        "description": "Python, SVM, KMeans, Hinge Loss",
+        "due": "25-09-2022",
+        "end": "25-09-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "25-09-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 60.0,
+                "recieved": 48.0
+            }
+        ],
+        "price": 60.0,
+        "start": "19-09-2022",
+        "state": "finished",
+        "title": "MNIST SVM & KMeans"
+    },
+    "project_00122": {
+        "client": "client_00073",
+        "comment": "",
+        "description": "Python",
+        "due": "07-10-2022",
+        "end": "07-10-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "07-10-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 60.0,
+                "recieved": 48.0
+            }
+        ],
+        "price": 60.0,
+        "start": "02-10-2022",
+        "state": "finished",
+        "title": "Password Manager"
+    },
+    "project_00123": {
+        "client": "client_00059",
+        "comment": "",
+        "description": "MFC C++, Python, PySide6",
+        "due": "06-10-2022",
+        "end": "06-10-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "20-09-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 900.0,
+                "recieved": 900.0
+            },
+            {
+                "currency": "$",
+                "date": "03-10-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 125.0,
+                "recieved": 100.0
+            },
+            {
+                "currency": "$",
+                "date": "03-10-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 10.0,
+                "recieved": 8.0
+            },
+            {
+                "currency": "$",
+                "date": "03-10-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 10.0,
+                "recieved": 8.0
+            }
+        ],
+        "price": 1000.0,
+        "start": "20-09-2022",
+        "state": "finished",
+        "title": "MFC Apps & Hotkey Recorder"
+    },
+    "project_00124": {
+        "client": "client_00031",
+        "comment": "",
+        "description": "Python",
+        "due": "13-10-2022",
+        "end": "13-10-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "09-10-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 100.0,
+                "recieved": 100.0
+            },
+            {
+                "currency": "$",
+                "date": "13-10-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 150.0,
+                "recieved": 150.0
+            },
+            {
+                "currency": "$",
+                "date": "13-10-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 10.0,
+                "recieved": 8.0
+            }
+        ],
+        "price": 260.0,
+        "start": "09-10-2022",
+        "state": "finished",
+        "title": "Python Restaurant Order System"
+    },
+    "project_00125": {
+        "client": "client_00073",
+        "comment": "Misunderstood the two assignments for the two assignments and the project, paid only 150 in total!",
+        "description": "Python, KMedians, LDA",
+        "due": "15-10-2022",
+        "end": "15-10-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "11-10-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 90.0,
+                "recieved": 90.0
+            },
+            {
+                "currency": "$",
+                "date": "15-10-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 60.0,
+                "recieved": 60.0
+            }
+        ],
+        "price": 180.0,
+        "start": "11-10-2022",
+        "state": "finished",
+        "title": "NYC Optimal Parking Lots & Face Recognition using LDA"
+    },
+    "project_00126": {
+        "client": "client_00053",
+        "comment": "",
+        "description": "Multiplayer, Server-Client, C, Game",
+        "due": "04-11-2022",
+        "end": "21-10-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "21-10-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 150.0,
+                "recieved": 150.0
+            }
+        ],
+        "price": 300.0,
+        "start": "21-10-2022",
+        "state": "cancelled",
+        "title": "C-Tron C Multiplayer Game"
+    },
+    "project_00127": {
+        "client": "client_00076",
+        "comment": "",
+        "description": "Java, Game",
+        "due": "28-10-2022",
+        "end": "28-10-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "23-10-2022",
+                "fees": 4.7,
+                "method": "PayPal",
+                "paid": 100.0,
+                "recieved": 95.3
+            },
+            {
+                "currency": "$",
+                "date": "23-10-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 200.0,
+                "recieved": 200.0
+            }
+        ],
+        "price": 200.0,
+        "start": "23-10-2022",
+        "state": "finished",
+        "title": "Edit a java pool game"
+    },
+    "project_00129": {
+        "client": "client_00031",
+        "comment": "",
+        "description": "Python, OOP",
+        "due": "28-10-2022",
+        "end": "25-10-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "24-10-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 125.0,
+                "recieved": 125.0
+            },
+            {
+                "currency": "$",
+                "date": "25-10-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 125.0,
+                "recieved": 125.0
+            }
+        ],
+        "price": 250.0,
+        "start": "24-10-2022",
+        "state": "finished",
+        "title": "Python final coding challenge"
+    },
+    "project_00131": {
+        "client": "client_00051",
+        "comment": "",
+        "description": "",
+        "due": "17-11-2022",
+        "end": "18-11-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "02-11-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 75.0,
+                "recieved": 75.0
+            },
+            {
+                "currency": "$",
+                "date": "18-11-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 75.0,
+                "recieved": 75.0
+            }
+        ],
+        "price": 150.0,
+        "start": "02-11-2022",
+        "state": "finished",
+        "title": "Cloud Computing Report"
+    },
+    "project_00132": {
+        "client": "client_00077",
+        "comment": "",
+        "description": "",
+        "due": "05-11-2022",
+        "end": "06-11-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "04-11-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 25.0,
+                "recieved": 25.0
+            },
+            {
+                "currency": "$",
+                "date": "06-11-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 25.0,
+                "recieved": 25.0
+            }
+        ],
+        "price": 50.0,
+        "start": "04-11-2022",
+        "state": "finished",
+        "title": "BlackBoxOptim.jl review"
+    },
+    "project_00133": {
+        "client": "client_00051",
+        "comment": "",
+        "description": "",
+        "due": "20-11-2022",
+        "end": "06-11-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "06-11-2022",
+                "fees": 0.0,
+                "method": "PayPal",
+                "paid": 75.0,
+                "recieved": 75.0
+            }
+        ],
+        "price": 150.0,
+        "start": "04-11-2022",
+        "state": "started",
+        "title": "ML Regression & Classification"
+    },
+    "project_00134": {
+        "client": "client_00078",
+        "comment": "",
+        "description": "",
+        "due": "17-11-2022",
+        "end": "17-11-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "17-11-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 125.0,
+                "recieved": 100.0
+            }
+        ],
+        "price": 125.0,
+        "start": "16-11-2022",
+        "state": "finished",
+        "title": "Julia Assignment"
+    },
+    "project_00135": {
+        "client": "client_00079",
+        "comment": "",
+        "description": "Julia, Python, PySide6",
+        "due": "18-11-2022",
+        "end": "18-11-2022",
+        "payments": [
+            {
+                "currency": "$",
+                "date": "18-11-2022",
+                "fees": 0.0,
+                "method": "Fiverr",
+                "paid": 400.0,
+                "recieved": 320.0
+            }
+        ],
+        "price": 400.0,
+        "start": "11-11-2022",
+        "state": "finished",
+        "title": "Julia exe"
+    }
+}

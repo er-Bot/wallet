@@ -1,25 +1,17 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'project_editbyygHF.ui'
+## Form generated from reading UI file 'project_editOoeqpp.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.4.0
+## Created by: Qt User Interface Compiler version 6.1.3
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
-    QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QDateEdit, QDateTimeEdit,
-    QDialog, QFrame, QHBoxLayout, QHeaderView,
-    QLabel, QLineEdit, QPlainTextEdit, QPushButton,
-    QSizePolicy, QSpacerItem, QTableWidget, QTableWidgetItem,
-    QVBoxLayout, QWidget)
+from PySide6.QtCore import *  # type: ignore
+from PySide6.QtGui import *  # type: ignore
+from PySide6.QtWidgets import *  # type: ignore
+
 
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
@@ -61,7 +53,7 @@ class Ui_Dialog(object):
 
         self.frame_5 = QFrame(self.dialog_window)
         self.frame_5.setObjectName(u"frame_5")
-        self.frame_5.setMinimumSize(QSize(0, 100))
+        self.frame_5.setMinimumSize(QSize(0, 0))
         self.frame_5.setFrameShape(QFrame.StyledPanel)
         self.frame_5.setFrameShadow(QFrame.Raised)
         self.verticalLayout_8 = QVBoxLayout(self.frame_5)
@@ -81,7 +73,6 @@ class Ui_Dialog(object):
         self.label_10.setMinimumSize(QSize(80, 0))
         self.label_10.setMaximumSize(QSize(80, 16777215))
         font = QFont()
-        font.setFamilies([u"Segoe UI"])
         font.setPointSize(10)
         font.setBold(True)
         font.setItalic(False)
@@ -213,8 +204,8 @@ class Ui_Dialog(object):
 
         self.start_date = QDateEdit(self.frame_11)
         self.start_date.setObjectName(u"start_date")
-        self.start_date.setMinimumSize(QSize(30, 30))
-        self.start_date.setMaximumSize(QSize(1000, 16777215))
+        self.start_date.setMinimumSize(QSize(120, 30))
+        self.start_date.setMaximumSize(QSize(120, 16777215))
         self.start_date.setCurrentSection(QDateTimeEdit.DaySection)
         self.start_date.setCalendarPopup(False)
 
@@ -222,6 +213,10 @@ class Ui_Dialog(object):
 
 
         self.horizontalLayout_5.addWidget(self.frame_11)
+
+        self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_5.addItem(self.horizontalSpacer_3)
 
         self.frame_12 = QFrame(self.frame_9)
         self.frame_12.setObjectName(u"frame_12")
@@ -241,8 +236,8 @@ class Ui_Dialog(object):
 
         self.due_date = QDateEdit(self.frame_12)
         self.due_date.setObjectName(u"due_date")
-        self.due_date.setMinimumSize(QSize(30, 30))
-        self.due_date.setMaximumSize(QSize(1000, 16777215))
+        self.due_date.setMinimumSize(QSize(120, 30))
+        self.due_date.setMaximumSize(QSize(120, 16777215))
         self.due_date.setCurrentSection(QDateTimeEdit.DaySection)
         self.due_date.setCalendarPopup(False)
 
@@ -272,8 +267,8 @@ class Ui_Dialog(object):
 
         self.end_date = QDateEdit(self.end_date_frame)
         self.end_date.setObjectName(u"end_date")
-        self.end_date.setMinimumSize(QSize(30, 30))
-        self.end_date.setMaximumSize(QSize(1000, 16777215))
+        self.end_date.setMinimumSize(QSize(120, 30))
+        self.end_date.setMaximumSize(QSize(120, 16777215))
         self.end_date.setCurrentSection(QDateTimeEdit.DaySection)
         self.end_date.setCalendarPopup(False)
 
@@ -287,8 +282,8 @@ class Ui_Dialog(object):
 
         self.frame = QFrame(self.frame_5)
         self.frame.setObjectName(u"frame")
-        self.frame.setMinimumSize(QSize(0, 60))
-        self.frame.setMaximumSize(QSize(16777215, 60))
+        self.frame.setMinimumSize(QSize(0, 50))
+        self.frame.setMaximumSize(QSize(16777215, 50))
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_12 = QHBoxLayout(self.frame)
@@ -306,6 +301,7 @@ class Ui_Dialog(object):
 
         self.description = QPlainTextEdit(self.frame)
         self.description.setObjectName(u"description")
+        self.description.setMaximumSize(QSize(16666666, 50))
 
         self.horizontalLayout_12.addWidget(self.description)
 
@@ -314,8 +310,8 @@ class Ui_Dialog(object):
 
         self.frame_4 = QFrame(self.frame_5)
         self.frame_4.setObjectName(u"frame_4")
-        self.frame_4.setMinimumSize(QSize(0, 60))
-        self.frame_4.setMaximumSize(QSize(16777215, 60))
+        self.frame_4.setMinimumSize(QSize(0, 50))
+        self.frame_4.setMaximumSize(QSize(16777215, 50))
         self.frame_4.setFrameShape(QFrame.StyledPanel)
         self.frame_4.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_3 = QHBoxLayout(self.frame_4)
@@ -333,6 +329,7 @@ class Ui_Dialog(object):
 
         self.comment = QPlainTextEdit(self.frame_4)
         self.comment.setObjectName(u"comment")
+        self.comment.setMaximumSize(QSize(16777215, 50))
 
         self.horizontalLayout_3.addWidget(self.comment)
 
@@ -341,12 +338,17 @@ class Ui_Dialog(object):
 
         self.frame_2 = QFrame(self.frame_5)
         self.frame_2.setObjectName(u"frame_2")
+        sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
+        sizePolicy1.setHorizontalStretch(0)
+        sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.frame_2.sizePolicy().hasHeightForWidth())
+        self.frame_2.setSizePolicy(sizePolicy1)
         self.frame_2.setMinimumSize(QSize(0, 0))
         self.frame_2.setMaximumSize(QSize(16777215, 1000000))
         self.frame_2.setFrameShape(QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QFrame.Raised)
         self.verticalLayout_2 = QVBoxLayout(self.frame_2)
-        self.verticalLayout_2.setSpacing(0)
+        self.verticalLayout_2.setSpacing(5)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.payments = QTableWidget(self.frame_2)
@@ -377,16 +379,25 @@ class Ui_Dialog(object):
 
         self.amount = QLineEdit(self.frame_3)
         self.amount.setObjectName(u"amount")
-        self.amount.setMinimumSize(QSize(0, 30))
+        self.amount.setMinimumSize(QSize(150, 30))
+        self.amount.setMaximumSize(QSize(100, 16777215))
 
         self.horizontalLayout_2.addWidget(self.amount)
 
-        self.payment_currency = QComboBox(self.frame_3)
+        self.payment_currency = QLabel(self.frame_3)
         self.payment_currency.setObjectName(u"payment_currency")
-        self.payment_currency.setMinimumSize(QSize(80, 30))
-        self.payment_currency.setMaximumSize(QSize(16777215, 30))
+        self.payment_currency.setMinimumSize(QSize(80, 0))
+        self.payment_currency.setMaximumSize(QSize(80, 16777215))
+        font1 = QFont()
+        font1.setBold(True)
+        self.payment_currency.setFont(font1)
+        self.payment_currency.setStyleSheet(u"font-size: 700;")
 
         self.horizontalLayout_2.addWidget(self.payment_currency)
+
+        self.horizontalSpacer_4 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_2.addItem(self.horizontalSpacer_4)
 
         self.payment_date = QDateEdit(self.frame_3)
         self.payment_date.setObjectName(u"payment_date")
@@ -469,11 +480,12 @@ class Ui_Dialog(object):
         self.start_date.setDisplayFormat(QCoreApplication.translate("Dialog", u"dd-MM-yyyy", None))
         self.label.setText(QCoreApplication.translate("Dialog", u"Due Date", None))
         self.due_date.setDisplayFormat(QCoreApplication.translate("Dialog", u"dd-MM-yyyy", None))
-        self.label_6.setText(QCoreApplication.translate("Dialog", u"Delivery Date", None))
+        self.label_6.setText(QCoreApplication.translate("Dialog", u"End Date", None))
         self.end_date.setDisplayFormat(QCoreApplication.translate("Dialog", u"dd-MM-yyyy", None))
         self.label_8.setText(QCoreApplication.translate("Dialog", u"Description", None))
         self.label_9.setText(QCoreApplication.translate("Dialog", u"Comment", None))
         self.amount.setPlaceholderText(QCoreApplication.translate("Dialog", u"Amount...", None))
+        self.payment_currency.setText(QCoreApplication.translate("Dialog", u"TextLabel", None))
         self.payment_date.setDisplayFormat(QCoreApplication.translate("Dialog", u"dd-MM-yyyy", None))
         self.add_pay.setText(QCoreApplication.translate("Dialog", u"Add", None))
         self.error.setText(QCoreApplication.translate("Dialog", u"TextLabel", None))

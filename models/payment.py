@@ -4,10 +4,10 @@ from datetime import date, datetime
 class PaymentModel(Model):
     __cid:int = 0
 
-    def __init__(self, client_id:int, bank_id:int, amount:float=0.0, currency:Currency=Currency.USD, date:date=date.today()) -> None:
+    def __init__(self, project_id:int, bank_id:int, amount:float=0.0, currency:Currency=Currency.USD, date:date=date.today()) -> None:
         super().__init__()
         self.id = self.mid
-        self.client = client_id
+        self.project = project_id
         self.account = bank_id
         self.amount = amount
         self.currency = currency
@@ -32,7 +32,7 @@ class PaymentModel(Model):
         d = {}
         if incude_id:
             d['id'] = self.id
-        d['client'] = self.client
+        d['project'] = self.project
         d['account'] = self.account
         d['amount'] = self.amount
         d['currency'] = Currency.code(self.currency)
@@ -40,7 +40,7 @@ class PaymentModel(Model):
         return d
 
     def from_json(item):
-        clt = PaymentModel(client_id=item['client'], bank_id=item['account'], amount=item['amount'])
+        clt = PaymentModel(project_id=item['project'], bank_id=item['account'], amount=item['amount'])
         clt.mid = item['id']
         clt.currency = Currency.decode(item['currency'])
         clt.date =  datetime.strptime(item['date'], "%d-%m-%Y").date()

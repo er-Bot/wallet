@@ -1,5 +1,7 @@
 from db.db_manager import DBManager
 from models import ProjectModel
+from typing import List
+from controllers.payment import PaymentController
 
 class ProjectController:
     
@@ -17,6 +19,8 @@ class ProjectController:
 
     def delete(cid):
         DBManager.projects.remove(DBManager.query.id == cid)
+        for pym in PaymentController.search_by(cid, 'project'):
+            PaymentController.delete(pym.id)
 
     def search(search, filter='numt', ignore=[]):
         clts = set()
@@ -36,12 +40,19 @@ class ProjectController:
 
         return set(clts)
 
+    def search_by(search, filter=''):
+        if filter == 'client':
+            return ProjectController.to_model(DBManager.projects.search(DBManager.query.client == search))
+        elif filter == 'id':
+            return ProjectController.to_model(DBManager.projects.search(DBManager.query.id == search))
+
+
     def exists(search, filter='numt', ignore=[]):
         clts = ProjectController.search(search, filter, ignore)
         
         return len(clts) != 0
 
-    def to_model(clts) -> list[ProjectModel]:
+    def to_model(clts) -> List[ProjectModel]:
         res = []
         for clt in clts:
             res.append(ProjectModel.from_json(clt))

@@ -1,5 +1,6 @@
 from db.db_manager import DBManager
 from models import ClientModel
+from typing import List
 
 class ClientController:
     
@@ -41,7 +42,7 @@ class ClientController:
         
         return len(clts) != 0
 
-    def to_model(clts) -> list[ClientModel]:
+    def to_model(clts) -> List[ClientModel]:
         res = []
         for clt in clts:
             res.append(ClientModel.from_json(clt))

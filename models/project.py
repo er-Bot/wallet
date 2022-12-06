@@ -8,6 +8,9 @@ class ProjectState:
     Canceled = 1
     Ongoing = 2
 
+    def get():
+        return [ProjectState.Ongoing, ProjectState.Finished, ProjectState.Canceled]
+
     def code(s):
         if s == ProjectState.Finished: return "finished"
         if s == ProjectState.Canceled: return "cancelled"
@@ -67,12 +70,12 @@ class ProjectModel(Model):
         d['title'] = self.title
         d['description'] = self.description
         d['comment'] = self.comment
-        d['start-date'] = self.start_date
-        d['due-date'] = self.due_date
-        d['delivery-date'] = self.delivery_date
+        d['start-date'] = date.strftime(self.start_date, "%d-%m-%Y")
+        d['due-date'] = date.strftime(self.due_date, "%d-%m-%Y")
+        d['delivery-date'] = date.strftime(self.delivery_date, "%d-%m-%Y") if self.delivery_date != None else None
         d['price'] = self.price
-        d['currency'] = self.currency
-        d['state'] = self.state
+        d['currency'] = Currency.code(self.currency)
+        d['state'] = ProjectState.code(self.state)
         return d
 
     def from_json(item):
@@ -83,7 +86,7 @@ class ProjectModel(Model):
         clt.comment = item['comment']
         clt.start_date = datetime.strptime(item['start-date'], "%d-%m-%Y").date()
         clt.due_date = datetime.strptime(item['due-date'], "%d-%m-%Y").date()
-        clt.delivery_date = datetime.strptime(item['delivery-date'], "%d-%m-%Y").date()
+        clt.delivery_date = None if item['delivery-date'] == None else datetime.strptime(item['delivery-date'], "%d-%m-%Y").date()
         clt.price = item['price']
         clt.currency = Currency.decode(item['currency'])
         clt.state = ProjectState.decode(item['state'])

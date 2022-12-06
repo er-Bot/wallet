@@ -7,9 +7,10 @@ from ui import *
 
 from views.table_view import TableView
 from views.yes_no_dialog import YesNoDialog
-from controllers import ClientController
-from models import ClientModel
+from controllers import *
+from models import *
 from db import DBManager
+from datetime import date, datetime
 
 class ClientView(TableView):
     def __init__(self, main):
@@ -25,16 +26,16 @@ class ClientView(TableView):
 
         self.table.setColumnWidth(0, 70)
         self.table.setColumnWidth(1, 120)
-        self.table.setColumnWidth(2, 120)
+        self.table.setColumnWidth(2, 100)
         self.table.setColumnWidth(3, 120)
         self.table.setColumnWidth(4, 180)
         self.table.setColumnWidth(5, 130)
-        self.table.setColumnWidth(6, 100)
+        self.table.setColumnWidth(6, 120)
 
         self.search.setText('')
         self.populate()
 
-    def populate(self, rid=None):
+    def populate(self, rid=None, filter=''):
         self.table.setRowCount(0)
 
         prompt = self.search.text().strip()
@@ -54,11 +55,9 @@ class ClientView(TableView):
         self.toggle_empty()
 
     def set_row_content(self, r:int, clt:ClientModel):
-        nm = QPushButton(ClientModel.encode(clt.id))
-        nm.setProperty('class', 'LinkButton')
-        nm.setCursor(Qt.PointingHandCursor)
-        nm.clicked.connect(lambda:self.list_projects(clt.id))
-        self.table.setCellWidget(r, 0, nm)
+        nm = QTableWidgetItem(ClientModel.encode(clt.id))
+        nm.setTextAlignment(Qt.AlignCenter)
+        self.table.setItem(r, 0, nm)
 
         nam_el = QTableWidgetItem(clt.name)
         nam_el.setTextAlignment(Qt.AlignCenter)
@@ -98,10 +97,15 @@ class ClientView(TableView):
         eb.setToolTip("Edit client")
         eb.clicked.connect(lambda: self.edit_row(r))
 
-        pb = TableView.button(ADD_ICON)
+        pb = TableView.button(ADD_ICON, light=True)
         pb.setToolTip("Add project")
         pb.clicked.connect(lambda: self.add_project(clt.id))
 
+        ab = TableView.button(LIST_ICON, light=True)
+        ab.setToolTip("List project")
+        ab.clicked.connect(lambda: self.main.update_view('project', clt.id, filter='client'))
+
+        lay.addWidget(ab, Qt.AlignCenter)        
         lay.addWidget(pb, Qt.AlignCenter)        
         lay.addWidget(eb, Qt.AlignCenter)        
         lay.addWidget(rb, Qt.AlignCenter)        
@@ -114,13 +118,13 @@ class ClientView(TableView):
         app_selection.exec()
                 
     def edit_row(self, r):
-        idx = ClientModel.decode(self.table.cellWidget(r, 0).text())
+        idx = ClientModel.decode(self.table.item(r, 0).text())
         model = ClientController.get(idx)
         app_selection = AddEditClientView(self, model, r)
         app_selection.exec()
 
     def remove_row(self, r):
-        cid = ClientModel.decode(self.table.cellWidget(r, 0).text())
+        cid = ClientModel.decode(self.table.item(r, 0).text())
 
         ynd = YesNoDialog(f"Are you sure to delete client [{ClientModel.encode(cid)}]?")
         ynd.exec()
@@ -130,9 +134,9 @@ class ClientView(TableView):
 
         self.populate()
 
-    # def add_project(self, cid):
-    #     app_selection = AddProjectView(ProjectModel(cid))
-    #     app_selection.exec()
+    def add_project(self, cid):
+        app_selection = AddProjectView(ProjectModel(cid))
+        app_selection.exec()
 
     # def list_projects(self, id):
     #     self.main.update_view("project", id)
@@ -257,90 +261,91 @@ class AddEditClientView(QDialog, UI_AddEditClient):
 
         return True
 
-# class AddProjectView(QDialog, UI_Project):
-#     def __init__(self, model:ProjectModel) -> None:
-#         super(AddProjectView, self).__init__()
-#         self.model = model
+class AddProjectView(QDialog, UI_AddProjet):
+    def __init__(self, model:ProjectModel) -> None:
+        super(AddProjectView, self).__init__()
+        self.model = model
  
-#         # Set ui
-#         self.setupUi(self) 
-#         self.setWindowFlag(Qt.WindowMaximizeButtonHint, False)
-#         self.setWindowFlag(Qt.MSWindowsFixedSizeDialogHint)
-#         self.setWindowFlag(Qt.FramelessWindowHint)
-#         self.setAttribute(Qt.WA_TranslucentBackground)
+       # Set ui
+        self.setupUi(self) 
+        self.setWindowFlag(Qt.WindowMaximizeButtonHint, False)
+        self.setWindowFlag(Qt.MSWindowsFixedSizeDialogHint)
+        self.setWindowFlag(Qt.FramelessWindowHint)
+        self.setAttribute(Qt.WA_TranslucentBackground)
+ 
+        self.error.setText("")
+        with open(STYLE_SHEET) as sc:
+            self.setStyleSheet(sc.read())
         
-#         self.error.setText("")
-#         with open(STYLE_SHEET) as sc:
-#             self.setStyleSheet(sc.read())
-
-#         self.cancel_btn.clicked.connect(self.close)
-#         self.save_btn.clicked.connect(self.add_project)
-
-#         self.price.setValidator(QDoubleValidator(decimals=2))
-#         self.price.setTextMargins(2,0,0,0)
-#         dol = QLabel(self.price)
-#         dol.setText("$")
-#         dol.setStyleSheet("background: transparent; font: 700 10pt 'Segoe UI'")
-#         dol.setGeometry(3, 0, 30, self.price.height())
-#         self.start_date.setButtonSymbols(QAbstractSpinBox.NoButtons)
-#         self.due_date.setButtonSymbols(QAbstractSpinBox.NoButtons)
-
-#         # Populate fields
-#         self.logo.setText(f"Project #{model.id:05d}")
-#         self.title.setText(model.title)
-#         self.start_date.setDate(QDate(model.start_date.year, model.start_date.month, model.start_date.day))
-#         self.due_date.setDate(QDate(model.end_date.year, model.end_date.month, model.end_date.day))
-#         self.price.setText(f"{model.price:.2f}")
-#         self.description.setPlainText(model.description)
-
-#     def keyPressEvent(self, event:QKeyEvent) -> None:
-#         if event.key() == Qt.Key_Enter or event.key() == Qt.Key_Return: self.add_project()
-#         if event.key() == Qt.Key_Escape: self.close()
+        for cur in Currency.get():
+            self.currency.addItem(Currency.code(cur).upper())
         
-#     def add_project(self):
-#         if self.validate():
-#             self.model.title = self.tit
-#             self.model.start_date = self.sdt
-#             self.model.due_date = self.ddt
-#             self.model.price = self.prc
-#             self.model.description = self.dsc
-#             ProjectController.update(self.model.id, self.model)
-#             self.close()
-
-#     def read_values(self):
-#         self.tit = self.title.text().strip()
-#         self.sdt = datetime.strptime(self.start_date.text(), "%d-%m-%Y")
-#         self.ddt = datetime.strptime(self.due_date.text(), "%d-%m-%Y")
-#         self.prc = float(self.price.text().replace(',', ''))
+        self.start_date.setButtonSymbols(QAbstractSpinBox.NoButtons)
+        self.due_date.setButtonSymbols(QAbstractSpinBox.NoButtons)
         
-#         self.dsc = self.description.toPlainText()
+        self.price.setValidator(QDoubleValidator(decimals=2))
+        
+        self.cancel_btn.clicked.connect(self.close)
+        self.save_btn.clicked.connect(self.add_project)
 
-#     def validate(self):
-#         self.error.setText("")
-#         self.read_values()
+        # Populate fields
+        self.logo.setText(f"Project #{model.id:05d}")
+        self.title.setText(model.title)
+        self.start_date.setDate(QDate(model.start_date.year, model.start_date.month, model.start_date.day))
+        self.due_date.setDate(QDate(model.due_date.year, model.due_date.month, model.due_date.day))
+        self.price.setText(f"{model.price:,.2f}")
+        self.description.setPlainText(model.description)
 
-#         if self.tit == "": 
-#             self.error.setText("Enter a title!")
-#             return False
+    def keyPressEvent(self, event:QKeyEvent) -> None:
+        if event.key() == Qt.Key_Enter or event.key() == Qt.Key_Return: self.add_project()
+        if event.key() == Qt.Key_Escape: self.close()
+        
+    def add_project(self):
+        if self.validate():
+            self.model.title = self.tit
+            self.model.start_date = self.sdt
+            self.model.due_date = self.ddt
+            self.model.price = self.prc
+            self.model.currency = self.cur
+            self.model.description = self.dsc
+            
+            ProjectController.insert(self.model)
 
-#         if self.prc == 0:
-#             self.error.setText("Set the project price!")
-#             return False
+            self.close()
 
-#         if self.ddt < self.sdt:
-#             self.error.setText("Due date is prior to the start date!")
-#             return False
+    def validate(self):
+        self.error.setText("")
+        
+        self.tit = self.title.text().strip()
+        if self.tit == "": 
+            self.error.setText("Enter a title!")
+            return False
+        
+        self.sdt = datetime.strptime(self.start_date.text(), "%d-%m-%Y").date()
+        self.ddt = datetime.strptime(self.due_date.text(), "%d-%m-%Y").date()
+        
+        self.prc = float(self.price.text().replace(',', ''))
+        if self.prc == 0:
+            self.error.setText("Set the project price!")
+            return False
 
-#         return True
+        self.cur = Currency.decode(self.currency.currentText().lower())
+        self.dsc = self.description.toPlainText()
 
-#     def code_client(self, cid, client):
-#         return  f"CLT{cid:04d}: {client.name if client.name != '' else client.usernames[0]}"   
+        if self.ddt < self.sdt:
+            self.error.setText("Due date is prior to the start date!")
+            return False
 
-#     def decode_client(self, s:str):
-#         return int(s.split(':')[0][3:])
+        return True
 
-#     def populate_clients(self):
-#         self.client.clear()
-#         for cid, client in ClientController.get_all().items():
-#             self.client.addItem(self.code_client(cid, client))
+    def code_client(self, cid, client):
+        return  f"CLT{cid:04d}: {client.name if client.name != '' else client.usernames[0]}"   
+
+    def decode_client(self, s:str):
+        return int(s.split(':')[0][3:])
+
+    def populate_clients(self):
+        self.client.clear()
+        for cid, client in ClientController.get_all().items():
+            self.client.addItem(self.code_client(cid, client))
 
