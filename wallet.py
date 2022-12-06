@@ -3,7 +3,7 @@ from PySide6.QtCore import *
 import sys
 
 from ui import UI_Main, STYLE_SHEET
-from views import DashboardView, ClientView, BankAccountView, PaymentView
+from views import DashboardView, ClientView, BankAccountView, PaymentView, ProjectView
 
 class MainWindow(QMainWindow, UI_Main):
     def __init__(self):
@@ -31,6 +31,7 @@ class MainWindow(QMainWindow, UI_Main):
         self.clients_btn.clicked.connect(lambda : self.update_view("client"))
         self.accounts_btn.clicked.connect(lambda : self.update_view("bank_account"))
         self.payments_btn.clicked.connect(lambda : self.update_view("payment"))
+        self.projects_btn.clicked.connect(lambda : self.update_view("project"))
         
         self.quit_btn.clicked.connect(self.quit)
 
@@ -45,7 +46,7 @@ class MainWindow(QMainWindow, UI_Main):
             "client": ClientView(self),
             "bank_account": BankAccountView(self),
             "payment": PaymentView(self),
-        #     "project": ProjectView(self),
+            "project": ProjectView(self),
         }
 
         self.view_layout = QVBoxLayout()
@@ -53,15 +54,13 @@ class MainWindow(QMainWindow, UI_Main):
             self.view_layout.addWidget(self.tables[k])
         self.main_frame.setLayout(self.view_layout)
 
-        self.update_view("payment")
+        self.update_view("project")
 
-    def update_view(self, k, rid=None):
+    def update_view(self, k, rid=None, filter=''):
         for _, v in self.tables.items():
             v.hide()
 
-        if rid != None:
-            self.tables[k].populate(rid)
-
+        self.tables[k].populate(rid, filter)
         self.tables[k].show()
 
     def expand(self, k):

@@ -3,7 +3,7 @@ from PySide6.QtWidgets import *
 from PySide6.QtCore import *
 from PySide6.QtGui import *
 
-from ui import UI_AddEditAccount, STYLE_SHEET
+from ui import *
 
 from views.table_view import TableView
 from views.yes_no_dialog import YesNoDialog
@@ -34,13 +34,16 @@ class BankAccountView(TableView):
         self.search.setText('')
         self.populate()
         
-    def populate(self):
+    def populate(self, rid=None, filter=''):
         self.table.setRowCount(0)
 
         prompt = self.search.text().strip()
         
         if prompt == '':
-            records = BankAccountController.all()
+            if rid != None:
+                records = [BankAccountController.get(rid)]
+            else:
+                records = BankAccountController.all()
         else:
             records = BankAccountController.search(prompt)
 
@@ -51,11 +54,9 @@ class BankAccountView(TableView):
         self.toggle_empty()
 
     def set_row_content(self, r:int, rec:BankAccountModel):
-        nm = QPushButton(BankAccountModel.encode(rec.id))
-        nm.setProperty('class', 'LinkButton')
-        nm.setCursor(Qt.PointingHandCursor)
-        # nm.clicked.connect(lambda:self.list_projects(rec.id))
-        self.table.setCellWidget(r, 0, nm)
+        nm = QTableWidgetItem(BankAccountModel.encode(rec.id))
+        nm.setTextAlignment(Qt.AlignCenter)
+        self.table.setItem(r, 0, nm)
 
         nam_el = QTableWidgetItem(rec.name)
         nam_el.setTextAlignment(Qt.AlignCenter)
@@ -83,14 +84,19 @@ class BankAccountView(TableView):
         lay.setContentsMargins(0, 0, 0, 0)
         lay.setSpacing(5)
         
-        rb = TableView.remove_button()
+        rb = TableView.button(DELETE_ICON)
         rb.setToolTip("Remove account")
         rb.clicked.connect(lambda: self.remove_row(r))
         
-        eb = TableView.edit_button()
+        eb = TableView.button(EDIT_ICON)
         eb.setToolTip("Edit account")
         eb.clicked.connect(lambda: self.edit_row(r))
 
+        pb = TableView.button(PAYMENT_ICON, light=True)
+        pb.setToolTip("List payments")
+        pb.clicked.connect(lambda: self.main.update_view('payment', rec.id, filter='account'))
+
+        lay.addWidget(pb, Qt.AlignCenter)        
         lay.addWidget(eb, Qt.AlignCenter)        
         lay.addWidget(rb, Qt.AlignCenter)        
         wid.setLayout(lay)
@@ -129,7 +135,7 @@ class BankAccountView(TableView):
         else:
             self.table.show()
             self.empty.hide()
-        
+
 class AddEditAccountView(QDialog, UI_AddEditAccount):
     def __init__(self, caller:BankAccountView, model:BankAccountModel, row:int=-1) -> None:
         super(AddEditAccountView, self).__init__()

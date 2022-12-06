@@ -1,17 +1,15 @@
-from datetime import datetime
 import re
 from PySide6.QtWidgets import *
 from PySide6.QtCore import *
 from PySide6.QtGui import *
 
-from ui import UI_AddEditClient, STYLE_SHEET
+from ui import *
 
 from views.table_view import TableView
 from views.yes_no_dialog import YesNoDialog
 from controllers import ClientController
 from models import ClientModel
 from db import DBManager
-
 
 class ClientView(TableView):
     def __init__(self, main):
@@ -92,15 +90,15 @@ class ClientView(TableView):
         lay.setContentsMargins(0, 0, 0, 0)
         lay.setSpacing(5)
         
-        rb = TableView.remove_button()
+        rb = TableView.button(DELETE_ICON)
         rb.setToolTip("Remove client")
         rb.clicked.connect(lambda: self.remove_row(r))
         
-        eb = TableView.edit_button()
+        eb = TableView.button(EDIT_ICON)
         eb.setToolTip("Edit client")
         eb.clicked.connect(lambda: self.edit_row(r))
 
-        pb = TableView.add_button()
+        pb = TableView.button(ADD_ICON)
         pb.setToolTip("Add project")
         pb.clicked.connect(lambda: self.add_project(clt.id))
 

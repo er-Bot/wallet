@@ -1286,11 +1286,11 @@
     "Project": {
         "2": {
             "id": 134,
-            "client_id": 78,
+            "client": 78,
             "state": "finished",
-            "start_date": "16-11-2022",
-            "due_date": "17-11-2022",
-            "delivery_date": "16-11-2022",
+            "start-date": "16-11-2022",
+            "due-date": "17-11-2022",
+            "delivery-date": "16-11-2022",
             "price": 125.0,
             "currency": "usd",
             "title": "Julia Assignment",

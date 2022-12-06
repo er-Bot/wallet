@@ -36,6 +36,12 @@ class PaymentController:
 
         return set(clts)
 
+    def search_by(search, filter=''):
+        if filter == 'account':
+            return PaymentController.to_model(DBManager.payments.search(DBManager.query.account == search))
+        if filter == 'id':
+            return PaymentController.to_model(DBManager.payments.search(DBManager.query.id == search))
+
     def exists(search, filter='', ignore=[]):
         clts = PaymentController.search(search, filter, ignore)
         

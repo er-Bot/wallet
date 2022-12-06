@@ -1,7 +1,7 @@
 
 from datetime import date, datetime
-from typing import List
-from models import Model, ClientModel
+from models.model import Model, Currency
+from models.client import ClientModel
 
 class ProjectState:
     Finished = 0
@@ -11,12 +11,12 @@ class ProjectState:
     def code(s):
         if s == ProjectState.Finished: return "finished"
         if s == ProjectState.Canceled: return "cancelled"
-        if s == ProjectState.Ongoing:  return "started"
+        if s == ProjectState.Ongoing:  return "ongoing"
 
     def decode(s):
         if s == "finished": return ProjectState.Finished
         if s == "cancelled": return ProjectState.Canceled
-        if s == "started":  return ProjectState.Ongoing
+        if s == "ongoing":  return ProjectState.Ongoing
 
 class ProjectModel(Model):
     __pid:int = 0
@@ -30,11 +30,11 @@ class ProjectModel(Model):
 
         self.start_date:date = date.today()
         self.due_date:date = date.today()
-        self.end_date:date = None
-        self.state = ProjectState.Ongoing
+        self.delivery_date:date = None
 
+        self.state = ProjectState.Ongoing
         self.price:float = 0
-        self.payments : List[PaymentModel] = []
+        self.currency = Currency.USD
 
         self.description:str = ""
         self.comment:str = ""        
@@ -47,51 +47,44 @@ class ProjectModel(Model):
     def mid(self, v:int):
         ProjectModel.__pid = v - 1
         self.id = self.mid
-    
-    def add_payment(self, payment:PaymentModel) -> None:
-        self.payments.append(payment)
-    
+        
     def mark_done(self, date:date, state:ProjectState=ProjectState.Finished) -> None:
         if date >= self.start_date: 
             self.end_date = date
             self.state = state
 
-    def encode(id: int):
-        return f"project_{id:05d}"
+    def encode(id: int=-1) -> str:
+        return "PRJ" + str(id).zfill(4)
 
-    def decode(code: str):
-        return int(code.split('_')[1])
+    def decode(code:str):
+        return int(code[3:])
 
-    def to_json(self):
-        return {
-            'client': ClientModel.code(self.client),
-            'title': self.title,
-            'start': date.strftime(self.start_date, "%d-%m-%Y"),
-            'due': date.strftime(self.due_date, "%d-%m-%Y"),
-            'end': date.strftime(self.end_date, "%d-%m-%Y"),
-            'state': ProjectState.code(self.state),
-            'price': self.price,
-            'payments': [payment.to_json() for payment in self.payments],
-            'description': self.description,
-            'comment': self.comment,
-        }
+    def to_json(self, incude_id=True):
+        d = {}
+        if incude_id:
+            d['id'] = self.id
+        d['client'] = self.client
+        d['title'] = self.title
+        d['description'] = self.description
+        d['comment'] = self.comment
+        d['start-date'] = self.start_date
+        d['due-date'] = self.due_date
+        d['delivery-date'] = self.delivery_date
+        d['price'] = self.price
+        d['currency'] = self.currency
+        d['state'] = self.state
+        return d
 
-    def from_json(k, item):
-        prj = ProjectModel()
-        prj.mid = ProjectModel.decode(k)
-
-        prj.client = ClientModel.decode(item['client'])
-        prj.title = item['title']
-        prj.start_date = datetime.strptime(item['start'], '%d-%m-%Y').date()
-        prj.due_date = datetime.strptime(item['due'], '%d-%m-%Y').date()
-        prj.end_date = datetime.strptime(item['end'], '%d-%m-%Y').date()
-        prj.state = ProjectState.decode(item['state'])
-        
-        prj.price = item['price']
-        for el in item['payments']: prj.add_payment(PaymentModel.from_json(0, el))
-        
-        prj.description = item['description'] 
-        prj.comment =item['comment']
-
-
-        return prj
+    def from_json(item):
+        clt = ProjectModel(cid=item['client'])
+        clt.mid = item['id']
+        clt.title = item['title']
+        clt.description = item['description']
+        clt.comment = item['comment']
+        clt.start_date = datetime.strptime(item['start-date'], "%d-%m-%Y").date()
+        clt.due_date = datetime.strptime(item['due-date'], "%d-%m-%Y").date()
+        clt.delivery_date = datetime.strptime(item['delivery-date'], "%d-%m-%Y").date()
+        clt.price = item['price']
+        clt.currency = Currency.decode(item['currency'])
+        clt.state = ProjectState.decode(item['state'])
+        return clt

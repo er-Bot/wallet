@@ -178,6 +178,7 @@
               </property>
               <property name="font">
                <font>
+                <family>Segoe UI</family>
                 <pointsize>10</pointsize>
                 <italic>false</italic>
                 <bold>true</bold>
@@ -244,13 +245,13 @@
              <widget class="QFrame" name="frame_10">
               <property name="minimumSize">
                <size>
-                <width>218</width>
+                <width>0</width>
                 <height>0</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>218</width>
+                <width>1000</width>
                 <height>16777215</height>
                </size>
               </property>
@@ -292,6 +293,7 @@
                  </property>
                  <property name="font">
                   <font>
+                   <family>Segoe UI</family>
                    <pointsize>10</pointsize>
                    <italic>false</italic>
                    <bold>true</bold>
@@ -315,14 +317,30 @@
                  </property>
                  <property name="minimumSize">
                   <size>
-                   <width>30</width>
+                   <width>150</width>
                    <height>30</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
-                   <width>1000</width>
+                   <width>150</width>
                    <height>30</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QComboBox" name="currency">
+                 <property name="minimumSize">
+                  <size>
+                   <width>80</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>80</width>
+                   <height>16777215</height>
                   </size>
                  </property>
                 </widget>
@@ -331,109 +349,29 @@
              </widget>
             </item>
             <item>
-             <widget class="QFrame" name="frame_6">
-              <property name="minimumSize">
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
                <size>
-                <width>218</width>
-                <height>0</height>
+                <width>40</width>
+                <height>20</height>
                </size>
               </property>
-              <property name="maximumSize">
-               <size>
-                <width>218</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::StyledPanel</enum>
-              </property>
-              <property name="frameShadow">
-               <enum>QFrame::Raised</enum>
-              </property>
-              <layout class="QHBoxLayout" name="horizontalLayout_15">
-               <property name="spacing">
-                <number>5</number>
-               </property>
-               <property name="leftMargin">
-                <number>0</number>
-               </property>
-               <property name="topMargin">
-                <number>0</number>
-               </property>
-               <property name="rightMargin">
-                <number>0</number>
-               </property>
-               <property name="bottomMargin">
-                <number>0</number>
-               </property>
-               <item>
-                <widget class="QLabel" name="label_5">
-                 <property name="minimumSize">
-                  <size>
-                   <width>80</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>80</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <pointsize>10</pointsize>
-                   <italic>false</italic>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">font: 700 10pt &quot;Segoe UI&quot;;</string>
-                 </property>
-                 <property name="text">
-                  <string>Start Date</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QDateEdit" name="start_date">
-                 <property name="minimumSize">
-                  <size>
-                   <width>30</width>
-                   <height>30</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>1000</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="currentSection">
-                  <enum>QDateTimeEdit::DaySection</enum>
-                 </property>
-                 <property name="displayFormat">
-                  <string>dd-MM-yyyy</string>
-                 </property>
-                 <property name="calendarPopup">
-                  <bool>false</bool>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </widget>
+             </spacer>
             </item>
             <item>
              <widget class="QFrame" name="frame_7">
               <property name="minimumSize">
                <size>
-                <width>218</width>
+                <width>200</width>
                 <height>0</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>218</width>
+                <width>1000</width>
                 <height>16777215</height>
                </size>
               </property>
@@ -475,6 +413,7 @@
                  </property>
                  <property name="font">
                   <font>
+                   <family>Segoe UI</family>
                    <pointsize>10</pointsize>
                    <italic>false</italic>
                    <bold>true</bold>
@@ -484,32 +423,17 @@
                   <string notr="true">font: 700 10pt &quot;Segoe UI&quot;;</string>
                  </property>
                  <property name="text">
-                  <string>Due Date</string>
+                  <string>State</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QDateEdit" name="due_date">
+                <widget class="QComboBox" name="state">
                  <property name="minimumSize">
                   <size>
-                   <width>30</width>
+                   <width>150</width>
                    <height>30</height>
                   </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>1000</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="currentSection">
-                  <enum>QDateTimeEdit::DaySection</enum>
-                 </property>
-                 <property name="displayFormat">
-                  <string>dd-MM-yyyy</string>
-                 </property>
-                 <property name="calendarPopup">
-                  <bool>false</bool>
                  </property>
                 </widget>
                </item>
@@ -544,17 +468,86 @@
              <number>0</number>
             </property>
             <item>
-             <spacer name="horizontalSpacer_2">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
+             <widget class="QFrame" name="frame_11">
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
               </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
               </property>
-             </spacer>
+              <layout class="QHBoxLayout" name="horizontalLayout_6">
+               <property name="spacing">
+                <number>5</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="label_5">
+                 <property name="minimumSize">
+                  <size>
+                   <width>80</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>80</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Segoe UI</family>
+                   <pointsize>10</pointsize>
+                   <italic>false</italic>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font: 700 10pt &quot;Segoe UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>Start Date</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QDateEdit" name="start_date">
+                 <property name="minimumSize">
+                  <size>
+                   <width>30</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>1000</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="currentSection">
+                  <enum>QDateTimeEdit::DaySection</enum>
+                 </property>
+                 <property name="displayFormat">
+                  <string>dd-MM-yyyy</string>
+                 </property>
+                 <property name="calendarPopup">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
             </item>
             <item>
              <widget class="QFrame" name="frame_12">
@@ -598,33 +591,33 @@
                   <string notr="true">font: 700 10pt &quot;Segoe UI&quot;;</string>
                  </property>
                  <property name="text">
-                  <string>State</string>
+                  <string>Due Date</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QComboBox" name="state">
+                <widget class="QDateEdit" name="due_date">
                  <property name="minimumSize">
                   <size>
-                   <width>131</width>
+                   <width>30</width>
                    <height>30</height>
                   </size>
                  </property>
-                 <item>
-                  <property name="text">
-                   <string>Started</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Finished</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Canceled</string>
-                  </property>
-                 </item>
+                 <property name="maximumSize">
+                  <size>
+                   <width>1000</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="currentSection">
+                  <enum>QDateTimeEdit::DaySection</enum>
+                 </property>
+                 <property name="displayFormat">
+                  <string>dd-MM-yyyy</string>
+                 </property>
+                 <property name="calendarPopup">
+                  <bool>false</bool>
+                 </property>
                 </widget>
                </item>
               </layout>
@@ -682,6 +675,7 @@
                  </property>
                  <property name="font">
                   <font>
+                   <family>Segoe UI</family>
                    <pointsize>10</pointsize>
                    <italic>false</italic>
                    <bold>true</bold>
@@ -691,7 +685,7 @@
                   <string notr="true">font: 700 10pt &quot;Segoe UI&quot;;</string>
                  </property>
                  <property name="text">
-                  <string>End Date</string>
+                  <string>Delivery Date</string>
                  </property>
                 </widget>
                </item>
@@ -778,6 +772,7 @@
               </property>
               <property name="font">
                <font>
+                <family>Segoe UI</family>
                 <pointsize>10</pointsize>
                 <italic>false</italic>
                 <bold>true</bold>
@@ -849,6 +844,7 @@
               </property>
               <property name="font">
                <font>
+                <family>Segoe UI</family>
                 <pointsize>10</pointsize>
                 <italic>false</italic>
                 <bold>true</bold>
@@ -963,28 +959,42 @@
                 <number>0</number>
                </property>
                <item>
-                <widget class="QComboBox" name="method">
+                <widget class="QComboBox" name="account">
+                 <property name="minimumSize">
+                  <size>
+                   <width>80</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="amount">
                  <property name="minimumSize">
                   <size>
                    <width>0</width>
                    <height>30</height>
                   </size>
                  </property>
-                 <item>
-                  <property name="text">
-                   <string>Fiverr</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>PayPal</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>CIH</string>
-                  </property>
-                 </item>
+                 <property name="placeholderText">
+                  <string>Amount...</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QComboBox" name="payment_currency">
+                 <property name="minimumSize">
+                  <size>
+                   <width>80</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>30</height>
+                  </size>
+                 </property>
                 </widget>
                </item>
                <item>
@@ -997,32 +1007,6 @@
                  </property>
                  <property name="displayFormat">
                   <string>dd-MM-yyyy</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLineEdit" name="paid">
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>30</height>
-                  </size>
-                 </property>
-                 <property name="placeholderText">
-                  <string>Paid...</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLineEdit" name="fees">
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>30</height>
-                  </size>
-                 </property>
-                 <property name="placeholderText">
-                  <string>Fees...</string>
                  </property>
                 </widget>
                </item>
@@ -1135,20 +1119,13 @@
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">QPushButton {
-	background: #545454;
-}
-
-QPushButton:hover {
-	background: #747474;
-}
-
-QPushButton:pressed {
-	background: #444444;
-}</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>Cancel</string>
+           </property>
+           <property name="class" stdset="0">
+            <string>SecondaryButton</string>
            </property>
           </widget>
          </item>

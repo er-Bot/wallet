@@ -37,22 +37,13 @@ class TableView(QWidget, UI_Table):
     def edit_row(self, r):
         raise NotImplemented("method not yet implemented!")
 
-    def populate(self, id=None):
+    def populate(self, id=None, filter=''):
         raise NotImplemented("method not yet implemented!")
 
-    def remove_button():
-        b = QPushButton(QIcon("ui/icons/light-trash.svg"), "")
+    def button(icon, light=False):
+        b = QPushButton(QIcon(icon), "")
         b.setFixedSize(30, 30)
-        return b
-
-    def add_button():
-        b = QPushButton(QIcon("ui/icons/light-add.svg"), "")
-        b.setFixedSize(30, 30)
-        return b
-
-    def edit_button():
-        b = QPushButton(QIcon("ui/icons/light-edit.svg"), "")
-        b.setStyleSheet("QPushButton {background: #545454;} QPushButton:hover {background: #747474;}")
-        b.setFixedSize(30, 30)
+        if light:
+            b.setStyleSheet("QPushButton {background: #545454;} QPushButton:hover {background: #747474;}")
         return b
         

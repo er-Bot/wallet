@@ -3,11 +3,11 @@ from PySide6.QtCore import *
 from PySide6.QtGui import *
 from datetime import date
 
-from ui import UI_AddEditAccount, STYLE_SHEET
+from ui import *
 
 from views.table_view import TableView
 from views.yes_no_dialog import YesNoDialog
-from models import PaymentModel, AccountType, Currency, ClientModel, BankAccountModel
+from models import PaymentModel, Currency, ClientModel, BankAccountModel
 from controllers import PaymentController
 
 
@@ -23,24 +23,29 @@ class PaymentView(TableView):
         self.table.setColumnCount(7)
         self.table.setHorizontalHeaderLabels(["ID", "Client", "Account", "Date", "Amount", "Currency", ""])
 
-        self.table.setColumnWidth(0, 70)
+        self.table.setColumnWidth(0, 100)
         self.table.setColumnWidth(1, 100)
         self.table.setColumnWidth(2, 100)
-        self.table.setColumnWidth(3, 180)
-        self.table.setColumnWidth(4, 180)
+        self.table.setColumnWidth(3, 200)
+        self.table.setColumnWidth(4, 150)
         self.table.setColumnWidth(5, 100)
-        self.table.setColumnWidth(6, 120)
+        self.table.setColumnWidth(6, 100)
 
         self.search.setText('')
+        self.add_btn.hide()
+        self.search.hide()
         self.populate()
         
-    def populate(self):
+    def populate(self, rid=None, filter=''):
         self.table.setRowCount(0)
 
         prompt = self.search.text().strip()
         
         if prompt == '':
-            records = PaymentController.all()
+            if rid == None:
+                records = PaymentController.all()
+            else:
+                records = PaymentController.search_by(rid, filter)
         else:
             records = PaymentController.search(prompt)
 
@@ -52,6 +57,7 @@ class PaymentView(TableView):
 
     def set_row_content(self, r:int, rec:PaymentModel):
         nm = QTableWidgetItem(PaymentModel.encode(rec.id))
+        nm.setTextAlignment(Qt.AlignCenter)
         self.table.setItem(r, 0, nm)
 
         nam_el = QPushButton(ClientModel.encode(rec.client))
@@ -60,11 +66,13 @@ class PaymentView(TableView):
         nam_el.clicked.connect(lambda: self.main.update_view("client", rec.client))
         self.table.setCellWidget(r, 1, nam_el)
 
-        cod_el = QTableWidgetItem(BankAccountModel.encode(rec.account))
-        cod_el.setTextAlignment(Qt.AlignCenter)
-        self.table.setItem(r, 2, cod_el)
+        bac_el = QPushButton(BankAccountModel.encode(rec.account))
+        bac_el.setProperty('class', 'LinkButton')
+        bac_el.setCursor(Qt.PointingHandCursor)
+        bac_el.clicked.connect(lambda: self.main.update_view("bank_account", rec.account))
+        self.table.setCellWidget(r, 2, bac_el)
 
-        typ_el = QTableWidgetItem(date.strftime(rec.date, "%d %b %Y"))
+        typ_el = QTableWidgetItem(date.strftime(rec.date, "%A %d %B %Y"))
         typ_el.setTextAlignment(Qt.AlignCenter)
         self.table.setItem(r, 3, typ_el)
 
@@ -82,11 +90,11 @@ class PaymentView(TableView):
         lay.setContentsMargins(0, 0, 0, 0)
         lay.setSpacing(5)
         
-        rb = TableView.remove_button()
+        rb = TableView.button(DELETE_ICON)
         rb.setToolTip("Remove payment")
         rb.clicked.connect(lambda: self.remove_row(r))
         
-        eb = TableView.edit_button()
+        eb = TableView.button(EDIT_ICON)
         eb.setToolTip("Edit payment")
         eb.clicked.connect(lambda: self.edit_row(r))
 
@@ -95,18 +103,6 @@ class PaymentView(TableView):
         wid.setLayout(lay)
 
         self.table.setCellWidget(r, self.table.columnCount() - 1, wid)
-
-    def add_row(self):
-        pass
-        # app_selection = AddEditAccountView(self, PaymentModel())
-        # app_selection.exec()
-                
-    def edit_row(self, r):
-        pass
-        # idx = PaymentModel.decode(self.table.item(r, 0).text())
-        # model = PaymentController.get(idx)
-        # app_selection = AddEditAccountView(self, model, r)
-        # app_selection.exec()
 
     def remove_row(self, r):
         cid = PaymentModel.decode(self.table.cellWidget(r, 0).text())
@@ -130,86 +126,3 @@ class PaymentView(TableView):
         else:
             self.table.show()
             self.empty.hide()
-
-# class AddEditPaymentView(QDialog, UI_AddEditAccount):
-#     def __init__(self, caller:PaymentView, model:PaymentModel, row:int=-1) -> None:
-#         super(AddEditAccountView, self).__init__()
-#         self.caller = caller
-#         self.model = model
-#         self.row = row
-
-#         # Set ui
-#         self.setupUi(self) 
-#         self.setWindowFlag(Qt.WindowMaximizeButtonHint, False)
-#         self.setWindowFlag(Qt.MSWindowsFixedSizeDialogHint)
-#         self.setWindowFlag(Qt.FramelessWindowHint)
-#         self.setAttribute(Qt.WA_TranslucentBackground)
-
-#         self.error.setText("")
-#         with open(STYLE_SHEET) as sc:
-#             self.setStyleSheet(sc.read())
-        
-#         self.cancel_btn.clicked.connect(self.close)
-#         self.save_btn.clicked.connect(self.add_account)
-        
-#         self.name.setText(model.name)
-#         self.code.setText(model.code.upper())
-#         self.atype.setCurrentText(AccountType.code(model.type).capitalize())
-#         self.currency.setCurrentText(Currency.code(model.currency).upper())
-#         self.amount.setText(f"{model.amount:,.2f}")
-
-#         self.logo.setText(f"Payment #{PaymentModel.encode(model.id)}")
-
-#     def keyPressEvent(self, event:QKeyEvent) -> None:
-#         if event.key() == Qt.Key_Enter or event.key() == Qt.Key_Return: self.add_project()
-#         if event.key() == Qt.Key_Escape: self.close()
-
-#     def add_account(self):
-#         if self.validate():
-#             self.model.name = self.nam
-#             self.model.code = self.cod
-#             self.model.type = AccountType.decode(self.atp)
-#             self.model.currency = Currency.decode(self.cur)
-#             self.model.amount = self.amt
-            
-#             if self.row == -1:
-#                 PaymentController.insert(self.model)
-#             else:
-#                 PaymentController.update(self.model)
-#             self.caller.populate()
-
-#             self.close()
-
-#     def read_values(self):
-#         self.nam = self.name.text().strip()
-#         self.cod = self.code.text().strip()
-#         self.atp = self.atype.currentText().lower()
-#         self.cur = self.currency.currentText().lower()
-#         self.amt = float(self.amount.text().strip().replace(',', ''))
-
-#     def validate(self):
-#         self.error.setText("")
-#         self.read_values()
-
-#         if self.nam == "": 
-#             self.error.setText("The field 'name' should not be empty!")
-#             return False
-#         else:
-#             if PaymentController.exists(self.nam, filter='n', ignore=[self.model.id]):
-#                 self.error.setText(f"The Name '{self.nam}' already exist!")
-#                 return False
-
-#         if self.cod != "":
-#             if PaymentController.exists(self.cod, 'c', [self.model.id]):
-#                 self.error.setText(f"The Code '{self.cod}' already exist!")
-#                 return False
-
-#         if self.cur == "": 
-#             self.error.setText("Currency most not empty!")
-#             return False
-
-#         if self.atp == "": 
-#             self.error.setText("Type most not empty!")
-#             return False
-
-#         return True

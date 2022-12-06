@@ -1,17 +1,24 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'tableTNMuFG.ui'
+## Form generated from reading UI file 'tableVSJgiQ.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.1.3
+## Created by: Qt User Interface Compiler version 6.4.0
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import *  # type: ignore
-from PySide6.QtGui import *  # type: ignore
-from PySide6.QtWidgets import *  # type: ignore
-
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QAbstractItemView, QApplication, QFrame, QHBoxLayout,
+    QHeaderView, QLabel, QLineEdit, QPushButton,
+    QSizePolicy, QSpacerItem, QTableWidget, QTableWidgetItem,
+    QVBoxLayout, QWidget)
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -24,8 +31,8 @@ class Ui_Form(object):
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.head_frame = QFrame(Form)
         self.head_frame.setObjectName(u"head_frame")
-        self.head_frame.setMinimumSize(QSize(0, 50))
-        self.head_frame.setMaximumSize(QSize(16777215, 50))
+        self.head_frame.setMinimumSize(QSize(0, 75))
+        self.head_frame.setMaximumSize(QSize(16777215, 75))
         self.head_frame.setFrameShape(QFrame.StyledPanel)
         self.head_frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_3 = QHBoxLayout(self.head_frame)
