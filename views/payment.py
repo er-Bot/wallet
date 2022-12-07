@@ -10,7 +10,6 @@ from views.yes_no_dialog import YesNoDialog
 from models import *
 from controllers import *
 
-
 class PaymentView(TableView):
     def __init__(self, main):
         super(PaymentView, self).__init__(main)
@@ -37,6 +36,8 @@ class PaymentView(TableView):
         self.populate()
         
     def populate(self, rid=None, filter=''):
+        self.prid = rid
+        self.pfilter = filter
         self.table.setRowCount(0)
 
         prompt = self.search.text().strip()
@@ -94,13 +95,18 @@ class PaymentView(TableView):
         rb.setToolTip("Remove payment")
         rb.clicked.connect(lambda: self.remove_row(r))
         
+        eb = TableView.button(EDIT_ICON, light=True)
+        eb.setToolTip("Edit payment")
+        eb.clicked.connect(lambda: self.edit_row(r))
+        
+        lay.addWidget(eb, Qt.AlignCenter)        
         lay.addWidget(rb, Qt.AlignCenter)        
         wid.setLayout(lay)
 
         self.table.setCellWidget(r, self.table.columnCount() - 1, wid)
 
     def remove_row(self, r):
-        cid = PaymentModel.decode(self.table.cellWidget(r, 0).text())
+        cid = PaymentModel.decode(self.table.item(r, 0).text())
 
         ynd = YesNoDialog(f"Are you sure to delete payment [{PaymentModel.encode(cid)}]?")
         ynd.exec()
@@ -109,6 +115,12 @@ class PaymentView(TableView):
             PaymentController.delete(cid)
 
         self.populate()
+
+    def edit_row(self, r):
+        idx = PaymentModel.decode(self.table.item(r, 0).text())
+        model = PaymentController.get(idx)
+        app_selection = EditPaymentView(self, model, r)
+        app_selection.exec()
 
     def toggle_empty(self):
         if self.table.rowCount() == 0:
@@ -121,3 +133,67 @@ class PaymentView(TableView):
         else:
             self.table.show()
             self.empty.hide()
+
+class EditPaymentView(QDialog, UI_EditPayment):
+    def __init__(self, caller:PaymentView, model:PaymentModel, row:int=-1) -> None:
+        super(EditPaymentView, self).__init__()
+        self.caller = caller
+        self.model = model
+        self.row = row
+
+        # Set ui
+        self.setupUi(self) 
+        self.setWindowFlag(Qt.WindowMaximizeButtonHint, False)
+        self.setWindowFlag(Qt.MSWindowsFixedSizeDialogHint)
+        self.setWindowFlag(Qt.FramelessWindowHint)
+        self.setAttribute(Qt.WA_TranslucentBackground)
+
+        self.error.setText("")
+        with open(STYLE_SHEET) as sc:
+            self.setStyleSheet(sc.read())
+        
+        self.cancel_btn.clicked.connect(self.close)
+        self.save_btn.clicked.connect(self.add_account)
+        
+        self.amount.setValidator(QDoubleValidator(decimals=2))
+        self.amount.setText(f"{model.amount:,.2f}")
+        self.currency.setText(Currency.code(model.currency).upper())
+
+        self.date.setButtonSymbols(QAbstractSpinBox.NoButtons)
+        self.date.setDate(QDate(model.date.year, model.date.month, model.date.day))
+
+        self.logo.setText(f"Payment #{PaymentModel.encode(model.id)}")
+
+    def keyPressEvent(self, event:QKeyEvent) -> None:
+        if event.key() == Qt.Key_Enter or event.key() == Qt.Key_Return: self.add_project()
+        if event.key() == Qt.Key_Escape: self.close()
+
+    def add_account(self):
+        if self.validate():
+            self.model.amount = self.amt
+            self.model.date = self.dat
+            
+            PaymentController.update(self.model)
+            self.caller.populate(self.caller.prid, self.caller.pfilter)
+
+            self.close()
+
+    def read_values(self):
+        self.amt = float(self.amount.text().strip().replace(',', ''))
+        qd = self.date.date()
+        self.dat = date(qd.year(), qd.month(), qd.day())
+
+    def validate(self):
+        self.error.setText("")
+        self.read_values()
+
+        if self.amt == 0: 
+            self.error.setText("Amount should be greater than zero!")
+            return False
+        
+        if self.dat < ProjectController.get(self.model.project).start_date:
+            self.error.setText(f"Payment date is older than project start date!")
+            return False
+
+        return True
+

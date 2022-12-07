@@ -178,6 +178,7 @@
               </property>
               <property name="font">
                <font>
+                <family>Segoe UI</family>
                 <pointsize>10</pointsize>
                 <italic>false</italic>
                 <bold>true</bold>
@@ -292,6 +293,7 @@
                  </property>
                  <property name="font">
                   <font>
+                   <family>Segoe UI</family>
                    <pointsize>10</pointsize>
                    <italic>false</italic>
                    <bold>true</bold>
@@ -411,6 +413,7 @@
                  </property>
                  <property name="font">
                   <font>
+                   <family>Segoe UI</family>
                    <pointsize>10</pointsize>
                    <italic>false</italic>
                    <bold>true</bold>
@@ -504,6 +507,7 @@
                  </property>
                  <property name="font">
                   <font>
+                   <family>Segoe UI</family>
                    <pointsize>10</pointsize>
                    <italic>false</italic>
                    <bold>true</bold>
@@ -684,6 +688,7 @@
                  </property>
                  <property name="font">
                   <font>
+                   <family>Segoe UI</family>
                    <pointsize>10</pointsize>
                    <italic>false</italic>
                    <bold>true</bold>
@@ -780,6 +785,7 @@
               </property>
               <property name="font">
                <font>
+                <family>Segoe UI</family>
                 <pointsize>10</pointsize>
                 <italic>false</italic>
                 <bold>true</bold>
@@ -858,6 +864,7 @@
               </property>
               <property name="font">
                <font>
+                <family>Segoe UI</family>
                 <pointsize>10</pointsize>
                 <italic>false</italic>
                 <bold>true</bold>
@@ -984,6 +991,28 @@
                <property name="bottomMargin">
                 <number>0</number>
                </property>
+               <item>
+                <widget class="QLabel" name="label_2">
+                 <property name="minimumSize">
+                  <size>
+                   <width>80</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>80</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font: 700 10pt &quot;Segoe UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>Payments</string>
+                 </property>
+                </widget>
+               </item>
                <item>
                 <widget class="QComboBox" name="account">
                  <property name="minimumSize">

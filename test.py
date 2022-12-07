@@ -4,7 +4,7 @@ from controllers import *
 from models import *
 from datetime import date, datetime
 
-with open("C:/Users/start/Desktop/Shared/FUN/Python/Freelancer/public/data/projects.json") as f:
+with open("./old_db/projects.json") as f:
     df = json.load(f)
     clts = {}
     for k, v in df.items():
@@ -21,9 +21,7 @@ with open("C:/Users/start/Desktop/Shared/FUN/Python/Freelancer/public/data/proje
         sd = v['start']
         dd = v['due']
         ed = v['end']
-        # print(f"{client}: {sd}, {dd}, {ed}")
-        # print(k, v)
-
+        
         prj = ProjectModel(client)
         prj.comment = comm
         prj.description = desc
@@ -31,26 +29,25 @@ with open("C:/Users/start/Desktop/Shared/FUN/Python/Freelancer/public/data/proje
         prj.delivery_date = datetime.strptime(ed, "%d-%m-%Y").date()
         prj.due_date = datetime.strptime(dd, "%d-%m-%Y").date()
 
-        s = 0
         for p in v['payments']:
-            if p['method'] == 'Fiverr': s += p['paid'] * .8
-            else: s += p['paid']
-
             ac = "FVRR"
             if p['method'] == "CIH": ac = "CIH"
             elif p['method'] == "PayPal": ac = "PYPL"
             elif p['method'] == "Fiverr": ac = "FVRR"
+
             acc = BankAccountController.search(ac, 'c')[0].id          
             pm = PaymentModel(prj.id, acc)
-            pm.amount = p['paid'] if acc != 3 else p['recieved']
+            pm.amount = p['paid'] if acc == 3 else p['recieved']
             pm.date = datetime.strptime(p['date'], "%d-%m-%Y").date()
             pm.currency = Currency.decode("usd" if p['currency'] == "$" else "mad")
             
             PaymentController.insert(pm)
 
-        prj.price = s
+        prj.price = v['price']
         prj.state = ProjectState.decode("ongoing" if v['state'] == "started" else v['state'])
         prj.title = v['title']
         prj.start_date = datetime.strptime(sd, "%d-%m-%Y").date()
 
         ProjectController.insert(prj)
+
+        

@@ -3,7 +3,7 @@ from PySide6.QtCore import *
 import sys
 
 from ui import UI_Main, STYLE_SHEET
-from views import DashboardView, ClientView, BankAccountView, PaymentView, ProjectView
+from views import *
 
 class MainWindow(QMainWindow, UI_Main):
     def __init__(self):
@@ -32,6 +32,7 @@ class MainWindow(QMainWindow, UI_Main):
         self.accounts_btn.clicked.connect(lambda : self.update_view("bank_account"))
         self.payments_btn.clicked.connect(lambda : self.update_view("payment"))
         self.projects_btn.clicked.connect(lambda : self.update_view("project"))
+        self.transactions_btn.clicked.connect(lambda : self.update_view("transaction"))
         
         self.quit_btn.clicked.connect(self.quit)
 
@@ -47,6 +48,7 @@ class MainWindow(QMainWindow, UI_Main):
             "bank_account": BankAccountView(self),
             "payment": PaymentView(self),
             "project": ProjectView(self),
+            "transaction": TransactionView(self),
         }
 
         self.view_layout = QVBoxLayout()
@@ -54,7 +56,7 @@ class MainWindow(QMainWindow, UI_Main):
             self.view_layout.addWidget(self.tables[k])
         self.main_frame.setLayout(self.view_layout)
 
-        self.update_view("project")
+        self.update_view("transaction")
 
     def update_view(self, k, rid=None, filter=''):
         for _, v in self.tables.items():

@@ -1,17 +1,25 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'project_editOoeqpp.ui'
+## Form generated from reading UI file 'project_editTJwwJK.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.1.3
+## Created by: Qt User Interface Compiler version 6.4.0
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import *  # type: ignore
-from PySide6.QtGui import *  # type: ignore
-from PySide6.QtWidgets import *  # type: ignore
-
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QApplication, QComboBox, QDateEdit, QDateTimeEdit,
+    QDialog, QFrame, QHBoxLayout, QHeaderView,
+    QLabel, QLineEdit, QPlainTextEdit, QPushButton,
+    QSizePolicy, QSpacerItem, QTableWidget, QTableWidgetItem,
+    QVBoxLayout, QWidget)
 
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
@@ -73,6 +81,7 @@ class Ui_Dialog(object):
         self.label_10.setMinimumSize(QSize(80, 0))
         self.label_10.setMaximumSize(QSize(80, 16777215))
         font = QFont()
+        font.setFamilies([u"Segoe UI"])
         font.setPointSize(10)
         font.setBold(True)
         font.setItalic(False)
@@ -371,6 +380,14 @@ class Ui_Dialog(object):
         self.horizontalLayout_2.setSpacing(5)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.label_2 = QLabel(self.frame_3)
+        self.label_2.setObjectName(u"label_2")
+        self.label_2.setMinimumSize(QSize(80, 0))
+        self.label_2.setMaximumSize(QSize(80, 16777215))
+        self.label_2.setStyleSheet(u"font: 700 10pt \"Segoe UI\";")
+
+        self.horizontalLayout_2.addWidget(self.label_2)
+
         self.account = QComboBox(self.frame_3)
         self.account.setObjectName(u"account")
         self.account.setMinimumSize(QSize(80, 30))
@@ -484,6 +501,7 @@ class Ui_Dialog(object):
         self.end_date.setDisplayFormat(QCoreApplication.translate("Dialog", u"dd-MM-yyyy", None))
         self.label_8.setText(QCoreApplication.translate("Dialog", u"Description", None))
         self.label_9.setText(QCoreApplication.translate("Dialog", u"Comment", None))
+        self.label_2.setText(QCoreApplication.translate("Dialog", u"Payments", None))
         self.amount.setPlaceholderText(QCoreApplication.translate("Dialog", u"Amount...", None))
         self.payment_currency.setText(QCoreApplication.translate("Dialog", u"TextLabel", None))
         self.payment_date.setDisplayFormat(QCoreApplication.translate("Dialog", u"dd-MM-yyyy", None))

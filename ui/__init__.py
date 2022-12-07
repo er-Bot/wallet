@@ -5,6 +5,8 @@ from ui.ui.ui_account import Ui_Dialog as UI_AddEditAccount
 from ui.ui.ui_table import Ui_Form as UI_Table
 from ui.ui.ui_project_edit import Ui_Dialog as UI_EditProjet
 from ui.ui.ui_project_add import Ui_Dialog as UI_AddProjet
+from ui.ui.ui_payment import Ui_Dialog as UI_EditPayment
+from ui.ui.ui_transaction import Ui_Dialog as UI_AddEditTransaction
 from ui.ui.ui_yes_no_dialog import Ui_Dialog as UI_Yes_No_Dialog
 
 STYLE_SHEET = "./ui/styles/light.qss"

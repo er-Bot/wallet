@@ -43,9 +43,9 @@ class ProjectController:
     def search_by(search, filter=''):
         if filter == 'client':
             return ProjectController.to_model(DBManager.projects.search(DBManager.query.client == search))
-        elif filter == 'id':
+        if filter == 'id':
             return ProjectController.to_model(DBManager.projects.search(DBManager.query.id == search))
-
+        return []
 
     def exists(search, filter='numt', ignore=[]):
         clts = ProjectController.search(search, filter, ignore)

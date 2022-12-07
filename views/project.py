@@ -37,6 +37,8 @@ class ProjectView(TableView):
         self.populate()
 
     def populate(self, rid=None, filter=''):
+        self.prid = rid
+        self.pfilter = filter
         self.table.setRowCount(0)
 
         prompt = self.search.text().strip()
@@ -53,9 +55,9 @@ class ProjectView(TableView):
             r = super().add_row()
             self.set_row_content(r, record)
 
-        su = sum([sum([py.amount for py in PaymentController.search_by(p.id, 'id')  if py.currency == Currency.USD]) for p in ProjectController.all()])
-        sm = sum([sum([py.amount for py in PaymentController.search_by(p.id, 'id')  if py.currency == Currency.MAD]) for p in ProjectController.all()])
-        self.error.setText(f"Total Profit: {su + .1 * sm:,.2f} USD")
+        s = DashboardController.count_profit_by_project(records)
+        self.error.setText(f"Total Profit: {s:,.2f} USD")        
+        
         self.toggle_empty()
 
     def set_row_content(self, r:int, record:ProjectModel):
@@ -81,13 +83,13 @@ class ProjectView(TableView):
         prc_el.setTextAlignment(Qt.AlignCenter)
         self.table.setItem(r, 4, prc_el)
 
-        s = sum([p.amount for p in PaymentController.search_by(record.id, 'project')])
-        pro_el = QTableWidgetItem(f"{s:,.2f} {Currency.code(record.currency).upper()}")
+        sf = sum([py.amount for py in PaymentController.search_by(record.id, 'project') if py.account == 3])     
+        so = sum([py.amount for py in PaymentController.search_by(record.id, 'project') if py.account != 3])     
+        pro_el = QTableWidgetItem(f"{.8*sf+so:,.2f} {Currency.code(record.currency).upper()}")
         pro_el.setTextAlignment(Qt.AlignCenter)
         self.table.setItem(r, 5, pro_el)
 
-
-        tit_el = QTableWidgetItem(record.title.capitalize())
+        tit_el = QTableWidgetItem(record.title)
         tit_el.setTextAlignment(Qt.AlignCenter)
         self.table.setItem(r, 6, tit_el)
 
@@ -128,13 +130,6 @@ class ProjectView(TableView):
 
         self.populate()
 
-    # def add_project(self, cid):
-    #     app_selection = AddProjectView(ProjectModel(cid))
-    #     app_selection.exec()
-
-    # def list_projects(self, id):
-    #     self.main.update_view("project", id)
-
     def toggle_empty(self):
         if self.table.rowCount() == 0:
             self.table.hide()
@@ -167,7 +162,6 @@ class EditProjectView(QDialog, UI_EditProjet):
                 
         self.cancel_btn.clicked.connect(self.close)
         self.save_btn.clicked.connect(self.edit_project)
-        self.state.currentIndexChanged.connect(self.mark_done)
         self.account.currentIndexChanged.connect(self.set_currency)
 
         for stt in ProjectState.get():
@@ -187,14 +181,16 @@ class EditProjectView(QDialog, UI_EditProjet):
 
         self.title.setText(model.title)
         self.price.setText(f"{model.price:,.2f}")
-        self.currency.setCurrentText(Currency.code(model.currency))
+        self.currency.setCurrentText(Currency.code(model.currency).upper())
         self.start_date.setDate(QDate(model.start_date.year, model.start_date.month, model.start_date.day))
         self.due_date.setDate(QDate(model.due_date.year, model.due_date.month, model.due_date.day))
         self.payment_date.setDate(QDate(date.today().year, date.today().month, date.today().day))
+        self.state.setCurrentText(ProjectState.code(self.model.state).capitalize())
         if model.state == ProjectState.Ongoing:
             self.end_date_frame.hide()
         else:
             self.end_date.setDate(QDate(model.delivery_date.year, model.delivery_date.month, model.delivery_date.day))
+        self.state.currentIndexChanged.connect(self.mark_done)
         self.description.setPlainText(model.description)
         self.comment.setPlainText(model.comment)
         
@@ -236,9 +232,15 @@ class EditProjectView(QDialog, UI_EditProjet):
             self.set_payment(r, pym)
 
     def set_payment(self, r, pym):
-            nm = QTableWidgetItem(PaymentModel.encode(pym.id))
-            nm.setTextAlignment(Qt.AlignCenter)
-            self.payments.setItem(r, 0, nm)
+            nm = QPushButton(PaymentModel.encode(pym.id))
+            nm.setProperty('class', 'LinkButton')
+            nm.setCursor(Qt.PointingHandCursor)
+            nm.clicked.connect(lambda: self.switch_payment(pym.id))
+            self.payments.setCellWidget(r, 0, nm)
+
+            # nm = QTableWidgetItem(PaymentModel.encode(pym.id))
+            # nm.setTextAlignment(Qt.AlignCenter)
+            # self.payments.setItem(r, 0, nm)
 
             nm = QTableWidgetItem(BankAccountController.get(pym.account).code)
             nm.setTextAlignment(Qt.AlignCenter)
@@ -270,8 +272,12 @@ class EditProjectView(QDialog, UI_EditProjet):
             wid.setLayout(lay)
             self.payments.setCellWidget(r, 5, wid)
 
+    def switch_payment(self, r):
+        self.caller.main.update_view("payment", r, 'id')
+        self.close()
+
     def remove_payment(self, r):
-        cid = PaymentModel.decode(self.payments.item(r, 0).text())
+        cid = PaymentModel.decode(self.payments.cellWidget(r, 0).text())
 
         PaymentController.delete(cid)
         self.update_payments()
@@ -314,7 +320,7 @@ class EditProjectView(QDialog, UI_EditProjet):
             self.model.description = self.dsc
             self.model.comment = self.cmt
             ProjectController.update(self.model)
-            self.caller.populate()
+            self.caller.populate(self.caller.prid, self.caller.pfilter)
 
             self.close()
 

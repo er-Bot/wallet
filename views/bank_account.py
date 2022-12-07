@@ -69,9 +69,7 @@ class BankAccountView(TableView):
         typ_el.setTextAlignment(Qt.AlignCenter)
         self.table.setItem(r, 3, typ_el)
 
-        pys = PaymentController.search_by(rec.id, 'account')
-        s = sum([p.amount for p in pys])
-        amt_el = QTableWidgetItem(f"{s:,.2f}")
+        amt_el = QTableWidgetItem(f"{rec.amount:,.2f}")
         amt_el.setTextAlignment(Qt.AlignCenter)
         self.table.setItem(r, 4, amt_el)
 
@@ -168,7 +166,7 @@ class AddEditAccountView(QDialog, UI_AddEditAccount):
         self.logo.setText(f"Bank Account #{BankAccountModel.encode(model.id)}")
 
     def keyPressEvent(self, event:QKeyEvent) -> None:
-        if event.key() == Qt.Key_Enter or event.key() == Qt.Key_Return: self.add_project()
+        if event.key() == Qt.Key_Enter or event.key() == Qt.Key_Return: self.add_account()
         if event.key() == Qt.Key_Escape: self.close()
 
     def add_account(self):

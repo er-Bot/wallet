@@ -1,6 +1,8 @@
-from db.db_manager import DBManager
+from db import DBManager
 from models import PaymentModel
 from typing import List
+
+from controllers.bank_account import BankAccountController, BankAccountModel
 
 class PaymentController:
     
@@ -12,12 +14,33 @@ class PaymentController:
 
     def insert(record:PaymentModel):
         DBManager.payments.insert(record.to_json())
+        bac = BankAccountController.get(record.account)
+        if bac.code == "FVRR":
+            bac.amount += record.amount * .8
+        else:
+            bac.amount += record.amount
+        BankAccountController.update(bac)
 
     def update(record:PaymentModel):
+        old = PaymentController.get(record.id).amount
         DBManager.payments.update(record.to_json(False), DBManager.query.id == record.id)
+        bac = BankAccountController.get(record.account)
+        if bac.code == "FVRR":
+            bac.amount += (record.amount - old) * .8
+        else:
+            bac.amount += (record.amount - old)
+        BankAccountController.update(bac)
 
     def delete(cid):
+        old = PaymentController.get(cid)
+        bac = BankAccountController.get(old.account)
+        if bac.code == "FVRR":
+            bac.amount -= old.amount * .8
+        else:
+            bac.amount -= old.amount
+        BankAccountController.update(bac)
         DBManager.payments.remove(DBManager.query.id == cid)
+        
 
     def search(search, filter='', ignore=[]):
         clts = set()
