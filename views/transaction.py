@@ -165,9 +165,11 @@ class AddEditTransactionView(QDialog, UI_AddEditTransaction):
         self.debtor.currentIndexChanged.connect(self.update_currencies)
         self.creditor.currentIndexChanged.connect(self.update_currencies)
 
-        if model.debtor != -1:
+        if row != -1:
             self.debtor.setCurrentText(BankAccountController.get(model.debtor).code)
             self.creditor.setCurrentText(BankAccountController.get(model.creditor).code)
+            self.debtor.setEnabled(False)
+            self.creditor.setEnabled(False)
         else:
             self.update_currencies()
             
@@ -196,7 +198,8 @@ class AddEditTransactionView(QDialog, UI_AddEditTransaction):
             if self.row == -1:
                 TransactionController.insert(self.model)
             else:
-                TransactionController.update(self.model)
+                self.error.setText("Thid funvtion hasn't been yet implemented correctly")
+                # TransactionController.update(self.model)
             self.caller.populate(self.caller.prid, self.caller.pfilter)
 
             self.close()
