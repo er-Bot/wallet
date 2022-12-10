@@ -33,6 +33,7 @@ class MainWindow(QMainWindow, UI_Main):
         self.payments_btn.clicked.connect(lambda : self.update_view("payment"))
         self.projects_btn.clicked.connect(lambda : self.update_view("project"))
         self.transactions_btn.clicked.connect(lambda : self.update_view("transaction"))
+        self.spendings_btn.clicked.connect(lambda : self.update_view("spending"))
         
         self.quit_btn.clicked.connect(self.quit)
 
@@ -49,6 +50,7 @@ class MainWindow(QMainWindow, UI_Main):
             "payment": PaymentView(self),
             "project": ProjectView(self),
             "transaction": TransactionView(self),
+            "spending": SpendingView(self),
         }
 
         self.view_layout = QVBoxLayout()

@@ -4,3 +4,4 @@ from controllers.payment import PaymentController
 from controllers.project import ProjectController
 from controllers.dachboard import DashboardController
 from controllers.transaction import TransactionController
+from controllers.spending import SpendingController

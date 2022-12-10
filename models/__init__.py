@@ -4,3 +4,4 @@ from models.model import Currency
 from models.payment import PaymentModel
 from models.project import ProjectModel, ProjectState
 from models.transaction import TransactionModel
+from models.spending import SpendingModel, SpendingCategory

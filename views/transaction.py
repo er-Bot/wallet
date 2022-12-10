@@ -198,8 +198,7 @@ class AddEditTransactionView(QDialog, UI_AddEditTransaction):
             if self.row == -1:
                 TransactionController.insert(self.model)
             else:
-                self.error.setText("Thid funvtion hasn't been yet implemented correctly")
-                # TransactionController.update(self.model)
+                TransactionController.update(self.model)
             self.caller.populate(self.caller.prid, self.caller.pfilter)
 
             self.close()

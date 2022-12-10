@@ -5,4 +5,5 @@ from views.bank_account import BankAccountView
 from views.payment import PaymentView
 from views.project import ProjectView
 from views.transaction import TransactionView
+from views.spending import SpendingView
 from views.yes_no_dialog import YesNoDialog
